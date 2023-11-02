@@ -16,29 +16,30 @@
     <main>
         <!-- Creating Form -->
         <section class="new-plant-form">
-            <h2>Add New Plant</h2>
+            <h2>Donate Local Plants</h2>
             <form id="new-plant">
                 <label for="plant-name">
                     Plant Name<span class="required">*</span>
                     <input id="plant-name" name="plant-name" type="text" required/>
                 </label>
-
                 <label for="plant-color">
                     Color<span class="required">*</span>
                     <input id="plant-color" name="plant-color" type="text" required/>
                 </label>
+                <br>
                 <label for="notes">
                     Description<textarea id="notes" type="notes"></textarea>
                 </label>
+                <br>
                 <button type="submit">Donate Plant</button>
             </form>
         </section>
-        <!-- Rendering Donated Plant -->
-        <section class="donated-plant">
+        <!-- Rendering Donated Plant (for reference) but should be dynamic -->
+        <section class="donated-plants">
             <h2>All Donated Plants</h2>
             <ul>
-                <h3>🌻</h3>
                 <li class="single-plant">
+                    <h3>🌻</h3>
                     <p><strong>Common Plant Name</strong>: Rosy Pussytoes</p>
                     <p><strong>Dominant Plant Color</strong>: Maroon</p>
                     <p><strong>Description</strong>: These maroon-hued beauties add a touch of elegance to any garden</p>

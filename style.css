@@ -1,0 +1,119 @@
+html,
+body {
+    color:rgb(206, 255, 239);
+    background-color: rgb(53, 90, 77);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:0;
+    padding:0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:0;
+}
+
+header {
+    background: rgb(53, 90, 77);
+    border-bottom: 3px solid #73956f;
+    color: rgb(206, 255, 239);
+}
+
+header h1 {
+    padding: 25px;
+}
+
+header h1 span {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+main {
+    margin: 25px auto;
+    width: 80%;
+}
+
+.new-plant-form {
+    border-bottom: 3px solid #73956f;
+    padding: 25px 0;
+}
+
+.new-plant-form h2 {
+    margin: 0;
+}
+
+form input,
+form label,
+form textarea {
+  box-sizing: border-box;
+  display: block;
+  margin: 5px 0;
+  width: 100%;
+}
+
+form input,
+form textarea {
+  border: 1px solid #73956f;
+  padding: 8px;
+}
+
+form button[type="submit"],
+button {
+  background: #73956f;
+  border: none;
+  border-radius: 5px;
+  color: #f7f7f7;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+form button[type="submit"]:hover,
+button:hover {
+  background: #17291b;
+}
+
+.required {
+  color: #d14007;
+}
+
+.donated-plants h2 {
+  margin: 25px 0 0;
+}
+
+.donated-plants ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.donated-plants ul li {
+  border: 1px solid #73956f;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.plant-count {
+  padding-left: 10px;
+}
+
+@media (max-width: 780px) {
+  .donated-plants ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .donated-plants ul {
+    grid-template-columns: 1fr;
+  }
+}
