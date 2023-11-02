@@ -21,14 +21,15 @@ function donatedPlantTemplate (plant,color,notes) { // fx creates template of li
     removeButton.addEventListener("click", (event) => {
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete li element with class "single-plant" closest to the button's parent since button is inside li element with that particular class
     }); 
-    // append button to the li
-    li.append(removeButton);
+
     
     if (plant && color) { //if statement to check if these fields are filled out since they are required fields
         li.innerHTML = `<h3>🌻</h3>
         <p><strong>Common Plant Name</strong>: ${plant}</p>
         <p><strong>Dominant Plant Color</strong>: ${color}</p>
         <p><strong>Description</strong>: ${notes ? `${notes}` : `none`}</p>`; // if notes are entered show notes, otherwise show "none"
+        // append button to the li
+        li.append(removeButton);
     };
     return li;
 };
