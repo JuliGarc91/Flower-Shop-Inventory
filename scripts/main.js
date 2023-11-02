@@ -9,4 +9,5 @@ form.addEventListener("submit", (event) => {
     console.log ("Plant:", event.target.plant.value);// to grab values of the form make an event target and add .value to get the values inputted in fields instead of the html code. Logs to DOM console
     console.log ("Color:", event.target.color.value);
     console.log ("Description:", event.target.notes.value);
+    // add callback function from generatePlant.js to append donated plants to webpage
 });
