@@ -12,4 +12,7 @@ form.addEventListener("submit", (event) => {
     // add callback function from generatePlant.js to append donated plants to webpage
     const { plant,color,notes } = event.target; // using destructuring to keep code DRY and use it as variables in callback fx
     donatePlant(plant.value,color.value,notes.value); // add .value to get the values inputted by user and not just the html code
+    // reset form after appending donated plant to webpage
+    form.reset();
+
 });
