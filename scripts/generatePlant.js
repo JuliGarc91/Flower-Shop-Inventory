@@ -19,6 +19,7 @@ function donatedPlantTemplate (plant,color,notes) { // fx creates template of li
     // add event listener so button works
     removeButton.addEventListener("click", (event) => {
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete li element with class "single-plant" closest to the button's parent since button is inside li element with that particular class
+        decrementCount()
     });
 
     

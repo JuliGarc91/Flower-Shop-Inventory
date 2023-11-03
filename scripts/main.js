@@ -25,5 +25,6 @@ const listItems = document.querySelectorAll("li"); // querySelectAll is a method
 for (item of listItems) {
     item.addEventListener("click", (event) => {
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete li element with class "single-plant" closest to the button's parent since button is inside li element with that particular class
+        decrementCount();
     }); 
 };
