@@ -28,3 +28,13 @@ for (item of listItems) {
         decrementCount();
     });
 };
+
+function resetForm() {
+    const form = document.getElementById("new-plant"); // Get the form element by its ID
+    form.reset(); // Reset the form to its initial state
+
+    // clear the description textarea if needed
+    const notesTextarea = document.getElementById("notes");
+    notesTextarea.value = "";
+}
+
