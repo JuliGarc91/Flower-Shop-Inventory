@@ -1,7 +1,8 @@
 // ------ ATTACHING JAVASCRIPT TO HTML ------
-// grabbing form
+// grabbing form from index.html
 const form = document.querySelector("form");
 
+// ---------- SUBMIT BUTTON FUNCTIONALITY ---------- 
 // getting event listener "submit" - Appends an event listener for events whose type attribute value is type "submit" in this case. The callback argument sets the callback that will be invoked when the event is dispatched
 form.addEventListener("submit", (event) => {
     event.preventDefault(); // the default is reloading page whenever submit button is clicked
@@ -21,7 +22,9 @@ form.addEventListener("submit", (event) => {
     form.reset();
 });
 
+// ---------- HARDCODED REMOVE BUTTON FUNCTIONALITY ---------- 
 // to add functionality where hardcoded listItems can be removed (these list items are single plants donated to the inventory)
+
 const listItems = document.querySelectorAll("li"); // querySelectAll is a method that returns all element descendants of node that match selectors (data type of output is an array so we can iterate through it)
 for (item of listItems) {
     item.addEventListener("click", (event) => {
@@ -30,6 +33,8 @@ for (item of listItems) {
     });
 };
 
+
+// ---------- RESET BUTTON FUNCTIONALITY ---------- 
 function resetForm() {
     const form = document.getElementById("new-plant"); // Get the form element by its ID
     form.reset(); // Reset the form to its initial state
@@ -39,3 +44,17 @@ function resetForm() {
     notesTextarea.value = "";
 }
 
+// ------ TEST!!!!! ---- handles page load to save data
+// Add an event listener to handle page load
+window.addEventListener('load', () => {
+    const ul = document.querySelector('ul');
+    
+//     Retrieve donated plant data from localStorage
+     const donatedPlants = JSON.parse(localStorage.getItem('donatedPlants')) || [];
+
+//      Iterate through the saved data and render it on the page
+    donatedPlants.forEach((plantData) => {
+        const { name, plant, color, notes } = plantData;
+        donatePlant(name, plant, color, notes); // Render the plant on the page
+    });
+});

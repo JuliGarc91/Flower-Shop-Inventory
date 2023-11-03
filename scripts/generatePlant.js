@@ -5,6 +5,29 @@ function donatePlant (name, plant,color,notes) { // fx appends donated plant to 
     // grab ul list from DOM
     const ul = document.querySelector("ul"); // creating variable for ul tag to append to webpage (need to grab it first in order to append it)
     ul.append(li); //appending newly created li to webpage
+
+
+
+// -------Test to see if code works----- Save the donated plant data to localStorage
+
+// Retrieve the existing donated plant data from localStorage
+const donatedPlants = JSON.parse(localStorage.getItem('donatedPlants')) || [];
+
+// Check if the donated plant is a duplicate
+const isDuplicate = donatedPlants.some((plantData) => {
+    return (
+        plantData.name === name &&
+        plantData.plant === plant &&
+        plantData.color === color &&
+        plantData.notes === notes
+    );
+});
+
+if (!isDuplicate) {
+    // If it's not a duplicate, save the donated plant data to localStorage
+    donatedPlants.push({ name, plant, color, notes });
+    localStorage.setItem('donatedPlants', JSON.stringify(donatedPlants));
+}
 };
 
 // ------ CALL BACK FUNCTION FOR FX donatePlant ------
@@ -21,20 +44,42 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete li element with class "single-plant" closest to the button's parent since button is inside li element with that particular class
         decrementCount()
     });
-
     
     if (name && plant && color) { //if statement to check if these fields are filled out since they are required fields
+        const currentDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+
         li.innerHTML = `<h3>🌻</h3>
-        <p><strong>Customer Full Name</strong>: ${name}</p>
-        <p><strong>Common Plant Name</strong>: ${plant}</p>
-        <p><strong>Dominant Plant Color</strong>: ${color}</p>
-        <p><strong>In Stock?</strong>: Yes</p>
-        <p><strong>Description</strong>: ${notes ? `${notes}` : `none`}</p>`; // if notes are entered show notes, otherwise show "none"
-        // append button to the li
-        li.append(removeButton);
-    };
+            <p><strong>Donor</strong>: ${name}</p>
+            <p><strong>Common Plant Name</strong>: ${plant}</p>
+            <p><strong>Dominant Plant Color</strong>: ${color}</p>
+            <p><strong>In Stock?</strong>: Yes</p>
+            <p><strong>Notes</strong>: ${notes ? `${notes}` : `none`}</p> 
+            <p id="date"><strong>Donated</strong>: ${currentDate.toLocaleDateString(undefined, options)}</p>`; // if notes are entered show notes, otherwise show "none"
+        li.append(removeButton); // append button to the li
+        count ++;
+        addCount(count);
+    }
     return li;
 };
+
+// will be used as call back in template to include date donated (which would be today's date)
+// function updateDate() {
+// const currentDateElement = document.getElementById("date");
+// const currentDate = new Date();
+// const options = { year: 'numeric', month: 'long', day: 'numeric' };
+// currentDateElement.textContent = currentDate.toLocaleDateString(undefined, options);
+// }
+
+
+// window.addEventListener("load", updateDate); // to call the updateDate function when the page loads
+
+
+
+
+
+
+
 
 // ---------- TEST ---------
 // Define a function to generate and display the plants

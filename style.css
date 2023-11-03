@@ -135,10 +135,6 @@ button:hover {
   list-style: none;
 }
 
-/* section {
-  border-bottom: 3px double #73956f;
-} */
-
 .plant-inventory {
   width: 100%;
   text-align: center;
@@ -155,10 +151,6 @@ button:hover {
   list-style: none;
   padding-right: 2.5%;
 }
-
-
-
-
 
 @media (max-width: 780px) {
   .donated-plants ul {

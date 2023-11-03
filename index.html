@@ -14,7 +14,7 @@
         <div class ="img-container">
             <img class="header-img" src="./images/botanicGarden.jpeg" alt="Monarch Butterfly on Local Plant Species">
         </div>
-        <h1>Welcome to <i>Botanic Haven</i>!<br><span class="plant-count">(Number of Plants Donated: 1)</span></h1>
+        <h1>Welcome to <i>Botanic Haven</i>!<br><span class="plant-count">(Number of Plants Donated: 3)</span></h1>
     </header>
 
     <main>
@@ -24,20 +24,20 @@
             <h2>Donate Local Plants</h2><br>
             <form id="new-plant">
                 <label for="name">
-                    Customer Full Name<span class="required">*</span>
-                    <input id="name" name="name" type="text" required/>
+                    Donor<span class="required">* 🌻</span>
+                    <input id="name" name="name" type="text" placeholder="Your Full Name" required/>
                 </label>
                 <label for="plant">
                     Plant Name<span class="required">*</span>
-                    <input id="plant" name="plant" type="text" required/>
+                    <input id="plant" name="plant" type="text" placeholder="Common Name" required/>
                 </label>
                 <label for="color">
                     Color<span class="required">*</span>
-                    <input id="color" name="color" type="text" required/>
+                    <input id="color" name="color" type="text" placeholder="Dominant Color"required/>
                 </label>
                 <br>
                 <label for="notes">
-                    Description<textarea id="notes" type="notes"></textarea>
+                    Description<textarea id="notes" type="notes" placeholder="Write short description..."></textarea>
                 </label>
                 <br>
                 <button type="submit">Donate Plant</button>
@@ -50,11 +50,32 @@
             <ul>
                 <li class="single-plant">
                     <h3>🌻</h3>
-                    <p><strong>Customer Full Name</strong>: Carmela Soprano</p>
+                    <p><strong>Donor</strong>: Carmela Soprano</p>
                     <p><strong>Common Plant Name</strong>: Rosy Pussytoes</p>
                     <p><strong>Dominant Plant Color</strong>: Maroon</p>
                     <p><strong>In Stock?</strong>: Yes</p>
-                    <p><strong>Description</strong>: These maroon-hued beauties add a touch of elegance to any garden</p>
+                    <p><strong>Notes</strong>: These maroon-hued beauties add a touch of elegance to any garden.</p>
+                    <p id="date"><strong>Donated</strong>: <span id="current-date">July 23, 2023</span></p>
+                    <button>Remove Plant Item</button>
+                </li>
+                <li class="single-plant">
+                    <h3>🌻</h3>
+                    <p><strong>Donor</strong>: The Notorious B.I.G</p>
+                    <p><strong>Common Plant Name</strong>: Dentate False Pennyroyal</p>
+                    <p><strong>Dominant Plant Color</strong>: Red</p>
+                    <p><strong>In Stock?</strong>: Yes</p>
+                    <p><strong>Notes</strong>: Fiery red leaves that bring a burst of color to your landscape.</p>
+                    <p id="date"><strong>Donated</strong>: <span id="current-date">November 1, 2023</span></p>
+                    <button>Remove Plant Item</button>
+                </li>
+                <li class="single-plant">
+                    <h3>🌻</h3>
+                    <p><strong>Donor</strong>: Dr. Gregory House</p>
+                    <p><strong>Common Plant Name</strong>: Dot Lichen</p>
+                    <p><strong>Dominant Plant Color</strong>: Crimson</p>
+                    <p><strong>In Stock?</strong>: Yes</p>
+                    <p><strong>Notes</strong>: With deep crimson hues, these lichens are nature's artwork.</p>
+                    <p id="date"><strong>Donated</strong>: <span id="current-date">August 10, 2023</span></p>
                     <button>Remove Plant Item</button>
                 </li>
             </ul>
