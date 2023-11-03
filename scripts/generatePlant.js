@@ -34,3 +34,41 @@ function donatedPlantTemplate (plant,color,notes) { // fx creates template of li
     };
     return li;
 };
+
+// ---------- TEST ---------
+// Define a function to generate and display the plants
+// function generatePlants() {
+//     // Get the section where you want to display the plants
+//     const plantsSection = document.querySelector('.available-plants');
+
+    // Clear the existing content
+    // plantsSection.innerHTML = '';
+
+    // Sample plant data
+    // const plantsData = [
+    //     { name: 'Plant 1', price: '$10', inStock: 'Yes' },
+    //     { name: 'Plant 2', price: '$20', inStock: 'No' },
+    //     { name: 'Plant 3', price: '$15', inStock: 'Yes' },
+    // ];
+
+// Loop through the plant data and create elements for each plant
+    // plantsData.forEach(plant => {
+    //     const plantContainer = document.createElement('div');
+    //     plantContainer.classList.add('plant-item');
+
+    //     const plantName = document.createElement('p');
+    //     plantName.textContent = `Name: ${plant.name}`;
+
+    //     const plantPrice = document.createElement('p');
+    //     plantPrice.textContent = `Price: ${plant.price}`;
+
+    //     const plantInStock = document.createElement('p');
+    //     plantInStock.textContent = `In Stock: ${plant.inStock}`;
+
+    //     plantContainer.appendChild(plantName);
+    //     plantContainer.appendChild(plantPrice);
+    //     plantContainer.appendChild(plantInStock);
+
+    //     plantsSection.appendChild(plantContainer);
+    // });
+// }
