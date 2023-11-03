@@ -15,6 +15,7 @@ h5,
 h6 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin:0;
+    text-align: center;
 }
 
 header {
@@ -25,6 +26,19 @@ header {
 
 header h1 {
     padding: 25px;
+    box-sizing: border-box;
+    font-size: 60px;
+}
+
+.header-img {
+    height: 400px;
+    /* overflow: hidden; */
+    border-radius: 35px;
+    padding-top: 20px;
+}
+.img-container {
+    filter:opacity(70%);
+    text-align: center;
 }
 
 header h1 span {
@@ -53,7 +67,7 @@ form textarea {
   box-sizing: border-box;
   display: block;
   margin: 5px 0;
-  width: 100%;
+  width: 50%;
 }
 
 form input,
@@ -90,6 +104,11 @@ button:hover,
     text-decoration: none;
 }
 
+.stock-item {
+    width: 25%;
+    text-align: center;
+}
+
 .required {
   color: #d14007;
 }
@@ -99,7 +118,6 @@ button:hover,
   margin: 25px 0 0;
 }
 
-.plant-inventory ul,
 .donated-plants ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -115,6 +133,7 @@ button:hover,
   border-radius: 5px;
   padding: 10px;
   text-align: center;
+  list-style: none;
 }
 
 .plant-count {
