@@ -27,6 +27,7 @@ function donatedPlantTemplate (plant,color,notes) { // fx creates template of li
         li.innerHTML = `<h3>🌻</h3>
         <p><strong>Common Plant Name</strong>: ${plant}</p>
         <p><strong>Dominant Plant Color</strong>: ${color}</p>
+        <p><strong>In Stock?</strong>: Yes</p>
         <p><strong>Description</strong>: ${notes ? `${notes}` : `none`}</p>`; // if notes are entered show notes, otherwise show "none"
         // append button to the li
         li.append(removeButton);

@@ -2,7 +2,7 @@
 let count = 1; // 1 is already hard coded
 function addCount (countParam) {
     const span = document.querySelector(".plant-count");
-    span.textContent = `(Number of Plants: ${countParam})`;
+    span.textContent = `(Number of Plants Donated: ${countParam})`;
 };
 
 function decrementCount() {
