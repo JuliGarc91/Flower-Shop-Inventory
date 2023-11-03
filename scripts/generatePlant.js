@@ -38,7 +38,7 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
     // create Remove Plant Item button for the template
     const removeButton = document.createElement("button");
     // add text to the button that says "Remove Plant Item"
-    removeButton.textContent = "Remove Plant Item";
+    removeButton.textContent = "Remove if Out of Stock";
     // add event listener so button works
     removeButton.addEventListener("click", (event) => {
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete li element with class "single-plant" closest to the button's parent since button is inside li element with that particular class
@@ -62,24 +62,6 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
     }
     return li;
 };
-
-// will be used as call back in template to include date donated (which would be today's date)
-// function updateDate() {
-// const currentDateElement = document.getElementById("date");
-// const currentDate = new Date();
-// const options = { year: 'numeric', month: 'long', day: 'numeric' };
-// currentDateElement.textContent = currentDate.toLocaleDateString(undefined, options);
-// }
-
-
-// window.addEventListener("load", updateDate); // to call the updateDate function when the page loads
-
-
-
-
-
-
-
 
 // ---------- TEST ---------
 // Define a function to generate and display the plants

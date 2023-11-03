@@ -117,11 +117,13 @@ button:hover {
   font-size: 10px;
 }
 
+.plant-inventory-container h2,
 .donated-plants h2 {
   margin: 25px 0 0;
   text-align: center;
 }
 
+.plant-inventory-container ul,
 .donated-plants ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -131,6 +133,7 @@ button:hover {
   margin: 0;
 }
 
+.plant-inventory-container ul li,
 .donated-plants ul li {
   border: 2px dotted #73956f;
   border-radius: 5px;
@@ -156,13 +159,21 @@ button:hover {
   padding-right: 2.5%;
 }
 
+footer {
+  margin-bottom: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
 @media (max-width: 780px) {
+  .plant-inventory-container ul,
   .donated-plants ul {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 500px) {
+  .plant-inventory-container ul,
   .donated-plants ul {
     grid-template-columns: 1fr;
   }
