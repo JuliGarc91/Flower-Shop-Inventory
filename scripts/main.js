@@ -58,3 +58,15 @@ window.addEventListener('load', () => {
         donatePlant(name, plant, color, notes); // Render the plant on the page
     });
 });
+
+// ------ Description Text Box can only contiain fixed amount of characters ------
+const textarea = document.getElementById("notes");
+const charCount = document.getElementById("char-count");
+
+textarea.addEventListener("input", () => {
+    const maxLength = parseInt(textarea.getAttribute("maxlength"));
+    const currentLength = textarea.value.length;
+    const remainingCharacters = maxLength - currentLength;
+
+    charCount.textContent = `Characters left: ${remainingCharacters}`;
+});

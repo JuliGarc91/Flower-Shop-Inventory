@@ -113,6 +113,10 @@ button:hover {
   background: #17291b;
 }
 
+#char-count {
+  font-size: 10px;
+}
+
 .donated-plants h2 {
   margin: 25px 0 0;
   text-align: center;
