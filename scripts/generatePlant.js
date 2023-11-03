@@ -1,5 +1,5 @@
-// function that will be used as a callback in main.js which generates a plant to add to inventory
-
+// ------ CALL BACK FUNCTION FOR EVENT LISTENER METHOD IN main.js ------
+//function will be used as a callback in main.js to generate a plant to add (donate in this case) to inventory
 function donatePlant (plant,color,notes) { // fx appends donated plant to webpage
     const li = donatedPlantTemplate (plant,color,notes); // call back fx that generates html template
     // grab ul list from DOM
@@ -7,8 +7,7 @@ function donatePlant (plant,color,notes) { // fx appends donated plant to webpag
     ul.append(li); //appending newly created li to webpage
 };
 
-
-// Making code DRY: functions should have only 1 concern so creating function to create template for GUI to show case donated plants
+// ------ CALL BACK FUNCTION FOR FX donatePlant ------
 function donatedPlantTemplate (plant,color,notes) { // fx creates template of li tags
     const li = document.createElement("li"); // create variable for li tag by grabbing it from html code
     li.classList.add("single-plant"); // class name for li that we want is single-plant
@@ -20,7 +19,7 @@ function donatedPlantTemplate (plant,color,notes) { // fx creates template of li
     // add event listener so button works
     removeButton.addEventListener("click", (event) => {
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete li element with class "single-plant" closest to the button's parent since button is inside li element with that particular class
-    }); 
+    });
 
     
     if (plant && color) { //if statement to check if these fields are filled out since they are required fields
