@@ -33,7 +33,6 @@ for (item of listItems) {
     });
 };
 
-
 // ---------- RESET BUTTON FUNCTIONALITY ---------- 
 function resetForm() {
     const form = document.getElementById("new-plant"); // Get the form element by its ID
@@ -43,21 +42,6 @@ function resetForm() {
     const notesTextarea = document.getElementById("notes");
     notesTextarea.value = "";
 }
-
-// ------ TEST!!!!! ---- handles page load to save data
-// Add an event listener to handle page load
-window.addEventListener('load', () => {
-    const ul = document.querySelector('ul');
-    
-//     Retrieve donated plant data from localStorage
-     const donatedPlants = JSON.parse(localStorage.getItem('donatedPlants')) || [];
-
-//      Iterate through the saved data and render it on the page
-    donatedPlants.forEach((plantData) => {
-        const { name, plant, color, notes } = plantData;
-        donatePlant(name, plant, color, notes); // Render the plant on the page
-    });
-});
 
 // ------ Description Text Box can only contiain fixed amount of characters ------
 const textarea = document.getElementById("notes");

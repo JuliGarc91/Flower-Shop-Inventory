@@ -3,13 +3,13 @@
 
 // Function to fetch data from a JSON file
 function fetchDataAndGenerateTemplate() {
-    fetch('data/plantInventory.json') // Replace 'plantInventory.json' with the correct path if needed
-        .then((response) => response.json())
+    fetch('data/plantInventory.json') // uses the fetch function to make an HTTP request to the specified URL, which is 'data/plantInventory.json'
+        .then((response) => response.json()) // response is received from the URL, this line sets up a then callback that handles the response. The response.json() method is used to parse the response body as JSON. This is important because JSON is a common data format for exchanging data between a web server and a web page
         .then((plantData) => {
-            generatePlantTemplate(plantData);
+            generatePlantTemplate(plantData); //  after successfully parsing the JSON data, this line sets up another then callback. It passes the parsed plantData to the generatePlantTemplate function, which is responsible for creating and updating elements in the DOM. This is where the data from plantInventory.json is used to generate the plant inventory list in the DOM
         })
         .catch((error) => {
-            console.error('Error fetching data:', error);
+            console.error('Error fetching data:', error); // If there are any errors during the fetch operation, this line sets up a catch callback to handle them. In this case, it logs an error message using console.error(). It's important to handle errors gracefully to ensure that any issues with fetching data do not crash the web page
         });
 }
 
@@ -52,4 +52,3 @@ function generatePlantTemplate(plantData) {
     plantInventorySection.innerHTML = ""; // Clear any existing content
     plantInventorySection.appendChild(plantList);
 }
-
