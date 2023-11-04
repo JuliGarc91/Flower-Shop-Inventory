@@ -19,7 +19,7 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
     // create Remove Plant Item button for the template
     const removeButton = document.createElement("button");
     // add text to the button
-    removeButton.textContent = "Hide Today's Donated Plant(s)";
+    removeButton.textContent = "Remove Today's Donated Plant(s)";
 
 
     // creating style here instead of using CSS because CSS isn't showing the style properly on webpage as it does locally
