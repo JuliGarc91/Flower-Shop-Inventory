@@ -95,3 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch((error) => console.error("Error loading plant data:", error)); // during the process of fetching and processing the JSON data from the file, it logs an error message to the console that might occur using console.error. The error message is "Error loading plant data," followed by the specific error that occurred, which is provided as the error parameter. gracefully handles the error by logging a message to the console, making it easier for developers to identify and troubleshoot issues.
 });
 
+// ------ Event listener fx will let generated appended element persist on the page ------
+// Call loadDonatedPlants when the page loads to populate the list from local storage
+document.addEventListener("DOMContentLoaded", function () {
+    loadDonatedPlants();
+});

@@ -4,14 +4,11 @@ function donatePlant (name, plant,color,notes) { // fx appends donated plant to 
     const li = donatedPlantTemplate (name,plant,color,notes); // call back fx that generates html template
     // grab ul list from DOM
     const ul = document.querySelector("ul"); // creating variable for ul tag to append to webpage (need to grab it first in order to append it)
+    
+    if (name && plant && color) {
+        saveDonatedPlant({ name, plant, color, notes });
+    }
     ul.append(li); //appending newly created li to webpage
-
-// -------Test to see if code works----- Save the donated plant data to localStorage
-
-// Retrieve the existing donated plant data from localStorage
-// const donatedPlants = JSON.parse(localStorage.getItem('donatedPlants')) || [];
-//     donatedPlants.push({ name, plant, color, notes });
-//     localStorage.setItem('donatedPlants', JSON.stringify(donatedPlants));
 };
 
 // ------ CALL BACK FUNCTION FOR FX donatePlant ------
@@ -26,6 +23,12 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
     // add event listener so button works
     removeButton.addEventListener("click", (event) => {
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete li element with class "single-plant" closest to the button's parent since button is inside li element with that particular class
+        try {
+            localStorage.removeItem('donatedPlants');
+                alert("Plant removed from list. 💚");
+            } catch (e) {
+                alert("🤯 Failed to remove plant from list: " + e.message); // Handle errors, such as when local storage is disabled or full
+            }
         decrementCount()
     });
     
@@ -51,3 +54,34 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
     }
     return li;
 };
+
+// ------ Function to save donated plant data to local storage ------
+function saveDonatedPlant(plantData) {
+    let donatedPlants = JSON.parse(localStorage.getItem('donatedPlants')) || [];
+
+    donatedPlants.push(plantData);
+
+    localStorage.setItem('donatedPlants', JSON.stringify(donatedPlants));
+}
+
+// ------ Function to load and display donated plants from local storage ------
+function loadDonatedPlants() {
+    const ul = document.querySelector("ul");
+    const donatedPlants = JSON.parse(localStorage.getItem('donatedPlants')) || [];
+
+    donatedPlants.forEach((plantData) => {
+        const li = donatedPlantTemplate(plantData.name, plantData.plant, plantData.color, plantData.notes);
+        ul.appendChild(li);
+    });
+}
+
+// ------ ALERT LETTING USER KNOW ELEMENT HAS BEEN REMOVED from hardcoded elements ------
+// Hardcoded elements will persist upon refresh unlike generated ones using js functions however fx will still remove element and give alert
+function alert() {
+    try {
+        alert("Plant removed from list. 💚");
+    } catch (e) {
+        // Handle errors, such as when local storage is disabled or full
+        alert("🤯 Failed to remove plant from list: " + e.message);
+    }
+}
