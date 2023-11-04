@@ -237,8 +237,13 @@ footer p {
     font-size: 20px;
   }
   .header-img {
+    width: 70%;
     border-radius: 5px;
     margin-top: 5px;
+  }
+  .about-us-img {
+    width: 40%;
+    border-radius: 5px;
   }
   h2 {
     font-size: 14px;
@@ -277,6 +282,25 @@ footer p {
   textarea {
     font-size: 8px;
   }
+  .about-us {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    list-style-position: inside;
+    padding-bottom: 40px;
+  }
+  #rosyPussyToes {
+    font-size: 5px;
+    color: lightcoral;
+  }
+  ol li {
+    padding-left: 0px;
+    width: 90%;
+    text-align:justify;
+  }
+  nav {
+    padding-bottom: 5px;
+  }
   footer p {
     font-size: 5px;
   }
@@ -287,8 +311,13 @@ footer p {
     font-size: 24px;
   }
   .header-img {
-    border-radius: 10px;
-    margin-top: 10px;
+    width: 70%;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  .about-us-img {
+    width: 40%;
+    border-radius: 5px;
   }
   header h1 span {
     font-size: 10px;
@@ -331,6 +360,15 @@ footer p {
   header h1 {
     font-size: 30px;
   }
+  .header-img {
+    width: 70%;
+    border-radius: 15px;
+    margin-top: 5px;
+  }
+  .about-us-img {
+    width: 40%;
+    border-radius: 15px;
+  }
   header h1 span {
     font-size: 10px;
   }
@@ -363,6 +401,21 @@ footer p {
   select,
   textarea {
     font-size: 12px;
+  }
+  .about-us {
+    margin: 0px auto;
+    width: 80%;
+    text-align: center;
+    list-style-position: inside;
+  }
+  #rosyPussyToes {
+    font-size: 5px;
+    color: lightcoral;
+  }
+  ol li {
+    padding-left: 0px;
+    width: 90%;
+    text-align:justify;
   }
   footer {
     padding-top: 3px;
