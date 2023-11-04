@@ -18,11 +18,11 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
     
     // create Remove Plant Item button for the template
     const removeButton = document.createElement("button");
-    // add text to the button that says "Remove Plant Item"
+    // add text to the button
     removeButton.textContent = "Hide Today's Donated Plant(s)";
 
 
-    // creating style here instead of using CSS because CSS isn't showing the style properly
+    // creating style here instead of using CSS because CSS isn't showing the style properly on webpage as it does locally
     removeButton.addEventListener("mouseover", function() {
         this.style.opacity = "90%";
         this.style.backgroundImage = "url(/images/japaneseMaple.jpg)";

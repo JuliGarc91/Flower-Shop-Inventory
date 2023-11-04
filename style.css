@@ -1,7 +1,6 @@
 html,
 body {
     color:rgb(206, 255, 239);
-    /* background-color: rgb(53, 90, 77); */
     background: linear-gradient(rgb(53, 90, 77),rgb(24, 43, 36));
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin:0;
@@ -130,13 +129,10 @@ button {
   box-shadow: 3px 3px 3px rgba(10, 39, 22, 0.5);
 }
 
+/* coded more styles for this on JS and HTML */
 form button[type="submit"]:hover,
 button:hover {
-  opacity: 90%;
   font-weight: 900;
-  /* background-image: url(/images/japaneseMaple.jpg); */
-  /* background-color: #adbe3e; */
-  /* background-size: contain; */
   box-shadow: 3px 3px 3px rgba(10, 39, 22, 0.5);
 }
 
@@ -177,10 +173,8 @@ button:hover {
   text-align: center;
 }
 
+/* coded more styles for this on JS and HTML */
 .other-page {
-  opacity: 80%;
-  background-image: url(/images/crownOfThorns.jpg);
-  background-size: contain;
   border-radius: 5px;
 }
 
@@ -209,8 +203,9 @@ footer p {
   margin: 0 auto;
   text-align: center;
   padding-left: 1%;
-  padding-bottom: 1%;
-  font-size: 12px;
+  /* padding-top: 1%;
+  padding-bottom: 1%; */
+  font-size: 10px;
 }
 
 @media (min-width: 100px) and (max-width: 415px) {
@@ -262,6 +257,9 @@ footer p {
     box-sizing: border-box;
     position:relative;
   }
+  footer p {
+    font-size: 5px;
+  }
 }
 
 @media (min-width:416px) and (max-width: 767px) {
@@ -305,8 +303,11 @@ footer p {
     font-size: 10px;
   }
   footer {
-    box-sizing: border-box;
-    position:relative;
+    width: 100%;
+    position:fixed;
+  }
+  footer p {
+    font-size: 8px;
   }
 }
 
@@ -348,7 +349,8 @@ footer p {
     font-size: 12px;
   }
   footer {
-    box-sizing: border-box;
+    width: 100%;
+    box-sizing: content-box;
     position:relative;
   }
 }
