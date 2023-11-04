@@ -54,3 +54,58 @@ textarea.addEventListener("input", () => {
 
     charCount.textContent = `Characters left: ${remainingCharacters}`;
 });
+
+// DROP DOWN MENU for plant name
+
+document.addEventListener("DOMContentLoaded", function () {
+    const plantDropdown = document.getElementById("plant");
+
+    // Function to add options to the dropdown
+    function populateDropdown(data) {
+        data.forEach((plant) => {
+            const option = document.createElement("option");
+            option.value = plant.plantName;
+            option.textContent = plant.plantName;
+            plantDropdown.appendChild(option);
+        });
+    }
+
+    // Fetch the JSON data from the file
+    fetch("data/plantInventory.json")
+        .then((response) => response.json())
+        .then((data) => {
+            // Call the function to populate the dropdown with the retrieved data
+            populateDropdown(data);
+        })
+        .catch((error) => console.error("Error loading plant data:", error));
+});
+
+// for color
+
+document.addEventListener("DOMContentLoaded", function () {
+    const colorDropdown = document.getElementById("color");
+
+    // Function to add options to the dropdown
+    function populateDropdown(data) {
+        const uniqueColors = [];
+        data.forEach((plant) => {
+            if (!uniqueColors.includes(plant.dominantColor)) {
+                uniqueColors.push(plant.dominantColor);
+                const option = document.createElement("option");
+                option.value = plant.dominantColor;
+                option.textContent = plant.dominantColor;
+                colorDropdown.appendChild(option);
+            }
+        });
+    }
+
+    // Fetch the JSON data from the file
+    fetch("data/plantInventory.json")
+        .then((response) => response.json())
+        .then((data) => {
+            // Call the function to populate the dropdown with the retrieved data
+            populateDropdown(data);
+        })
+        .catch((error) => console.error("Error loading plant data:", error));
+});
+
