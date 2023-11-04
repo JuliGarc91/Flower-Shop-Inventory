@@ -19,7 +19,7 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
     // create Remove Plant Item button for the template
     const removeButton = document.createElement("button");
     // add text to the button that says "Remove Plant Item"
-    removeButton.textContent = "Remove from list";
+    removeButton.textContent = "Hide Today's Donated Plant(s)";
     // add event listener so button works
     removeButton.addEventListener("click", (event) => {
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete li element with class "single-plant" closest to the button's parent since button is inside li element with that particular class
