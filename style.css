@@ -158,7 +158,7 @@ button:hover {
 }
 
 .plant-inventory {
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
 }
 
@@ -169,10 +169,10 @@ button:hover {
   border-top: 3px double #73956f;
 }
 
-p nav {
-  margin-bottom: 0 auto;
-  text-align: center;
+nav {
+  margin: 0 auto;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 footer {

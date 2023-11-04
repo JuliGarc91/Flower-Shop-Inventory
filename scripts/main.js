@@ -72,27 +72,26 @@ document.addEventListener("DOMContentLoaded", function () {
 // ------ DROP DOWN MENU for color ------
 
 document.addEventListener("DOMContentLoaded", function () {
-    const colorDropdown = document.getElementById("color");
-    // Function to add options to the dropdown
-    function populateDropdown(data) {
-        const uniqueColors = [];
-        data.forEach((plant) => {
+    const colorDropdown = document.getElementById("color"); // find and select HTML element with id "color" and store in 'colorDropdown'
+    
+    function populateDropdown(data) { // will be used as a callback function when fetching data from JSON file to add options to the dropdown
+        const uniqueColors = []; // stores unique colors later on
+        data.forEach((plant) => { // iterates through data array (json data file)
             if (!uniqueColors.includes(plant.dominantColor)) {
                 uniqueColors.push(plant.dominantColor);
-                const option = document.createElement("option");
-                option.value = plant.dominantColor;
-                option.textContent = plant.dominantColor;
+                const option = document.createElement("option"); // Create new HTML 'option' element and store in the 'option' variable
+                option.value = plant.dominantColor; // Set 'value' property of the 'option' element to the dominantColor of the current plant
+                option.textContent = plant.dominantColor; // Set the text content of the 'option' element to the dominantColor of current plant
                 colorDropdown.appendChild(option);
             }
         });
     }
     // Fetch the JSON data from the file
-    fetch("data/plantInventory.json")
+    fetch("data/plantInventory.json") // fetch method is used to make HTTP request to specified JSON file ("data/plantInventory.json"). This request retrieves the data from the JSON file
         .then((response) => response.json())
-        .then((data) => {
-            // Call the function to populate the dropdown with the retrieved data
-            populateDropdown(data);
+        .then((data) => { // .then() method is used to handle response from fetch. When the response is received, the arrow function (data) => {...} is executed. In this function, the retrieved JSON data is represented by the data parameter. This is how it knows that data contains the JSON data from the file.
+            populateDropdown(data); // The populateDropdown function is then called, passing the data parameter to it. This is where the JSON data is used to iterate through and add options to the dropdown based on the "dominantColor" property of each plant in the JSON data.
         })
-        .catch((error) => console.error("Error loading plant data:", error));
+        .catch((error) => console.error("Error loading plant data:", error)); // during the process of fetching and processing the JSON data from the file, it logs an error message to the console that might occur using console.error. The error message is "Error loading plant data," followed by the specific error that occurred, which is provided as the error parameter. gracefully handles the error by logging a message to the console, making it easier for developers to identify and troubleshoot issues.
 });
 

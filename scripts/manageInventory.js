@@ -19,14 +19,14 @@ function generatePlantTemplate(plantData) {
     const plantList = document.createElement("ul");
 
     plantData.forEach((plant) => {
-        const listItem = document.createElement("li");
-        listItem.classList.add("single-plant");
+        const listItem = document.createElement("li"); // create new HTML 'li' (list item) element to store in 'listItem'
+        listItem.classList.add("single-plant"); // adding the CSS class "single-plant" to the 'listItem' element for styling or identification purposes
 
         const emoji = document.createElement("h3");
         emoji.textContent = "🌻";
 
-        const commonName = document.createElement("p");
-        commonName.innerHTML = `<strong>Common Plant Name</strong>: ${plant.plantName}`;
+        const commonName = document.createElement("p"); // Create a new HTML 'p' (paragraph) element and store in the 'commonName' variable
+        commonName.innerHTML = `<strong>Common Plant Name</strong>: ${plant.plantName}`; // Set the inner HTML of the 'commonName' paragraph to display the common plant name. Inner HTML of this paragraph is set to display common plant name using value of plantName property from object named plant. The common plant name is enclosed in <strong> tags to make it bold in the rendered HTML
 
         const dominantColor = document.createElement("p");
         dominantColor.innerHTML = `<strong>Dominant Plant Color</strong>: ${plant.dominantColor}`;
@@ -37,24 +37,27 @@ function generatePlantTemplate(plantData) {
         const inStockSelect = document.createElement("select");
         inStockSelect.classList.add("In-Stock");
 
-        const inStockOption = document.createElement("option");
-        inStockOption.value = "In Stock";
-        inStockOption.text = "In Stock";
+        // used when dynamically creating options for a <select> element in an HTML form aka dropdown menu, where the value attribute represents the value associated with the option, and the text is the visible label for the option
+        const inStockOption = document.createElement("option"); // new option element created
+        inStockOption.value = "In Stock"; // Set 'value' property of 'inStockOption' element to string "In Stock"
+        inStockOption.text = "In Stock"; // Set 'text' property of 'inStockOption' element to string "In Stock"
 
-        const outOfStockOption = document.createElement("option");
+
+        const outOfStockOption = document.createElement("option"); // Create a new HTML 'option' element and store it in the 'outOfStockOption' variable
+
         outOfStockOption.value = "Out of Stock";
         outOfStockOption.text = "Out of Stock";
 
         inStockSelect.appendChild(inStockOption);
         inStockSelect.appendChild(outOfStockOption);
 
-        // Set the selected option based on the plant's inStock property
+        // set selected option based on the plant's inStock property in json file
         if (plant.inStock) {
             inStockOption.selected = true;
         } else {
             outOfStockOption.selected = true;
         }
-
+        // appends to webpage
         listItem.appendChild(emoji);
         listItem.appendChild(commonName);
         listItem.appendChild(dominantColor);
@@ -64,7 +67,7 @@ function generatePlantTemplate(plantData) {
         plantList.appendChild(listItem);
     });
 
-    const plantInventorySection = document.querySelector(".plant-inventory-container");
+    const plantInventorySection = document.querySelector(".plant-inventory-container"); // find and select an HTML element with class "plant-inventory-container" and store in 'plantInventorySection'
     plantInventorySection.innerHTML = ""; // Clear any existing content
     plantInventorySection.appendChild(plantList);
 }
