@@ -33,19 +33,12 @@
                         <option value="" disabled selected>Select a Plant</option>
                     </select>
                 </label> 
-                
                 <label for="color">
                     Color<span class="required">*</span>
                     <select id="color" name="color" required>
                         <option value="" disabled selected>Select a Color</option>
                     </select>
                 </label>  
-
-
-                <!-- <label for="color">
-                    Color<span class="required">*</span>
-                    <input id="color" name="color" type="text" placeholder="Dominant Color"required/>
-                </label> -->
                 <label for="notes">
                     Description<textarea id="notes" type="notes" placeholder="Write short description..." maxlength="200"></textarea>
                 </label><p id="char-count">Characters left: 200</p>
@@ -62,45 +55,60 @@
                     <p><strong>Donor</strong>: Carmela Soprano</p>
                     <p><strong>Common Plant Name</strong>: Rosy Pussytoes</p>
                     <p><strong>Dominant Plant Color</strong>: Maroon</p>
-                    <p><strong>In Stock?</strong>: Yes</p>
+                    <p><strong>In Stock?</strong>
+                        <select>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </p>
                     <p><strong>Notes</strong>: These maroon-hued beauties add a touch of elegance to any garden.</p>
                     <p id="date"><strong>Donated</strong>: <span id="current-date">July 23, 2023</span></p>
-                    <button>Remove if Out of Stock</button>
+                    <button>Remove from list</button>
                 </li>
                 <li class="single-plant">
                     <h3>🌻</h3>
                     <p><strong>Donor</strong>: The Notorious B.I.G</p>
                     <p><strong>Common Plant Name</strong>: Dentate False Pennyroyal</p>
                     <p><strong>Dominant Plant Color</strong>: Red</p>
-                    <p><strong>In Stock?</strong>: Yes</p>
+                    <p><strong>In Stock?</strong>
+                        <select>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </p>
                     <p><strong>Notes</strong>: Fiery red leaves that bring a burst of color to your landscape.</p>
                     <p id="date"><strong>Donated</strong>: <span id="current-date">November 1, 2023</span></p>
-                    <button>Remove if Out of Stock</button>
+                    <button>Remove from list</button>
                 </li>
                 <li class="single-plant">
                     <h3>🌻</h3>
                     <p><strong>Donor</strong>: Dr. Gregory House</p>
                     <p><strong>Common Plant Name</strong>: Dot Lichen</p>
                     <p><strong>Dominant Plant Color</strong>: Crimson</p>
-                    <p><strong>In Stock?</strong>: Yes</p>
+                    <p><strong>In Stock?</strong>
+                        <select>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </p>
                     <p><strong>Notes</strong>: With deep crimson hues, these lichens are nature's artwork.</p>
                     <p id="date"><strong>Donated</strong>: <span id="current-date">August 10, 2023</span></p>
-                    <button>Remove if Out of Stock</button>
-                </li>
-            </ul>
-        </section></section><br>
-        <section class="plant-inventory">
-            <h2>Plant Inventory</h2>
-            <ul>
-                <li class="stock-item">
-                    <a href="./plantInventory.html"><button>Show All Plants</button></a>
+                    <button>Remove from list</button>
                 </li>
             </ul>
         </section>
+    </section>
+    <br>
+    <section class="plant-inventory">
+        <h2>Plant Inventory</h2>
+            <footer class="back-to-main">
+                <nav>
+                    <a href="./plantInventory.html"><button>Show All Plants</button></a>
+                </nav>
+            </footer>
+    </section>
     <div class="footer">
-        <footer>
-            <p>Plants!</p>
-        </footer>
+        <p>© 2023 YourRegisteredCompanyName®. All rights reserved.</p>
     </div>
     </main>
 </body>
