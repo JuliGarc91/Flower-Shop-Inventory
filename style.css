@@ -61,6 +61,7 @@ header h1 span {
     font-family:'Courier New', Courier, monospace;
     font-size: 18px;
     margin-left: 10px;
+    color: lightpink;
 }
 
 main {
@@ -171,6 +172,9 @@ button:hover {
   background-size: contain;
 }
 
+.flowers {
+  box-shadow: none;
+}
 
 .plant-inventory h2 {
   text-align: center;
@@ -181,7 +185,7 @@ button:hover {
 
 nav {
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: auto;
   text-align: center;
 }
 
