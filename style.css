@@ -2,7 +2,7 @@ html,
 body {
     color:rgb(206, 255, 239);
     /* background-color: rgb(53, 90, 77); */
-    background: linear-gradient(rgb(53, 90, 77),rgb(33, 58, 49));
+    background: linear-gradient(rgb(53, 90, 77),rgb(24, 43, 36));
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin:0;
     padding:0;
@@ -23,7 +23,6 @@ header {
     width: 100%;
     max-width: 100%;
     min-width: 100%;
-    /* background: rgb(53, 90, 77); */
     background: linear-gradient(rgb(53, 90, 77),rgb(33, 58, 49));
     border-bottom: 3px double #73956f;
     color: rgb(213, 252, 239);
@@ -36,7 +35,8 @@ header h1 {
 }
 
 strong {
-  color:rgb(5, 245, 157);
+  color:rgb(196, 244, 3);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .plant-count {
@@ -52,7 +52,7 @@ strong {
 }
 
 .img-container {
-    filter:opacity(70%);
+    filter:opacity(80%);
     text-align: center;
 }
 
@@ -75,7 +75,6 @@ main {
 }
 
 .new-plant-form {
-    /* border-bottom: 3px solid #73956f; */
     padding: 25px 25px;
     width: 70%;
     text-align: center;
@@ -98,7 +97,7 @@ form textarea {
   margin: 5px 0;
   width: 100%;
   border-radius: 5px;
-  padding-right: 10px;
+  padding-left: 10px;
 }
 
 select,
@@ -123,7 +122,8 @@ button {
 
 form button[type="submit"]:hover,
 button:hover {
-  background: #17291b;
+  background: #012c39;
+  box-shadow: 3px 3px 3px rgba(86, 98, 91, 0.5);
 }
 
 #char-count {
@@ -160,9 +160,16 @@ button:hover {
 }
 
 .plant-inventory {
-  /* width: 100%; */
+  height: 100%;
   text-align: center;
 }
+
+.other-page {
+  opacity: 80%;
+  background-image: url(/images/crownOfThorns.jpg);
+  background-size: contain;
+}
+
 
 .plant-inventory h2 {
   text-align: center;
