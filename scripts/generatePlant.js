@@ -20,16 +20,27 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
     const removeButton = document.createElement("button");
     // add text to the button that says "Remove Plant Item"
     removeButton.textContent = "Hide Today's Donated Plant(s)";
+
+
+    // creating style here instead of using CSS because CSS isn't showing the style properly
+    removeButton.addEventListener("mouseover", function() {
+        this.style.opacity = "90%";
+        this.style.backgroundImage = "url(/images/japaneseMaple.jpg)";
+        this.style.backgroundSize = "contain";
+    });
+    
+    // Add a mouseout event listener to revert styles
+    removeButton.addEventListener("mouseout", function() {
+        this.style.opacity = "100%";
+        this.style.backgroundImage = "none";
+    });
+
+
     // add event listener so button works
     removeButton.addEventListener("click", (event) => {
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete li element with class "single-plant" closest to the button's parent since button is inside li element with that particular class
-        // try {
             localStorage.removeItem('donatedPlants');
-            //     alert("Plant removed from list.");
-            // } catch (e) {
-            //     alert("Failed to remove plant from list: " + e.message); // Handle errors, such as when local storage is disabled or full
-            // }
-        decrementCount()
+            decrementCount()
     });
     
     if (name && plant && color) { //if statement to check if these fields are filled out since they are required fields
@@ -74,14 +85,3 @@ function loadDonatedPlants() {
         ul.appendChild(li);
     });
 }
-
-// ------ ALERT LETTING USER KNOW ELEMENT HAS BEEN REMOVED from hardcoded elements ------
-// Hardcoded elements will persist upon refresh unlike generated ones using js functions however fx will still remove element and give alert
-// function alert() {
-//     try {
-//         alert("Plant removed from list.");
-//     } catch (e) {
-//         // Handle errors, such as when local storage is disabled or full
-//         alert("Failed to remove plant from list: " + e.message);
-//     }
-// }
