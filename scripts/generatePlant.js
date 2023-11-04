@@ -23,12 +23,12 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
     // add event listener so button works
     removeButton.addEventListener("click", (event) => {
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete li element with class "single-plant" closest to the button's parent since button is inside li element with that particular class
-        try {
+        // try {
             localStorage.removeItem('donatedPlants');
-                alert("Plant removed from list. 💚");
-            } catch (e) {
-                alert("🤯 Failed to remove plant from list: " + e.message); // Handle errors, such as when local storage is disabled or full
-            }
+            //     alert("Plant removed from list.");
+            // } catch (e) {
+            //     alert("Failed to remove plant from list: " + e.message); // Handle errors, such as when local storage is disabled or full
+            // }
         decrementCount()
     });
     
@@ -77,11 +77,11 @@ function loadDonatedPlants() {
 
 // ------ ALERT LETTING USER KNOW ELEMENT HAS BEEN REMOVED from hardcoded elements ------
 // Hardcoded elements will persist upon refresh unlike generated ones using js functions however fx will still remove element and give alert
-function alert() {
-    try {
-        alert("Plant removed from list. 💚");
-    } catch (e) {
-        // Handle errors, such as when local storage is disabled or full
-        alert("🤯 Failed to remove plant from list: " + e.message);
-    }
-}
+// function alert() {
+//     try {
+//         alert("Plant removed from list.");
+//     } catch (e) {
+//         // Handle errors, such as when local storage is disabled or full
+//         alert("Failed to remove plant from list: " + e.message);
+//     }
+// }
