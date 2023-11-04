@@ -51,6 +51,18 @@ strong {
   box-shadow: 3px 3px 3px rgba(10, 39, 22, 0.5);
 }
 
+.about-us-img {
+  width: 30%;
+  max-width: 30%; 
+  border-radius: 35px;
+  box-shadow: 3px 3px 3px rgba(10, 39, 22, 0.5);
+}
+
+#rosyPussyToes {
+  font-size: 8px;
+  color: lightcoral;
+}
+
 .img-container {
     filter:opacity(80%);
     text-align: center;
@@ -183,6 +195,20 @@ button:hover {
   margin: auto;
   padding-top: 25px;
   border-top: 3px double #73956f;
+}
+
+.about-us {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  list-style-position: inside;
+  padding-bottom: 40px;
+}
+
+ol li {
+  padding-left: 200px;
+  width: 70%;
+  text-align:justify;
 }
 
 nav {
