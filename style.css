@@ -204,10 +204,15 @@ button:hover {
   list-style-position: inside;
   padding-bottom: 40px;
 }
+.plants {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 20%;
+  text-align: center;
+}
 
 ol li {
-  padding-left: 200px;
-  width: 70%;
+  width: 90%;
   text-align:justify;
 }
 
@@ -232,7 +237,7 @@ footer p {
   font-size: 10px;
 }
 
-@media (min-width: 100px) and (max-width: 415px) {
+@media (min-width: 200px) and (max-width: 545px) {
   header h1 {
     font-size: 20px;
   }
@@ -282,21 +287,16 @@ footer p {
   textarea {
     font-size: 8px;
   }
-  .about-us {
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    list-style-position: inside;
-    padding-bottom: 40px;
-  }
   #rosyPussyToes {
     font-size: 5px;
     color: lightcoral;
   }
-  ol li {
-    padding-left: 0px;
-    width: 90%;
-    text-align:justify;
+  .plants {
+    margin-left: 0%;
+  }
+  .about-us {
+    width: 100%;
+    padding-bottom: 20px;
   }
   nav {
     padding-bottom: 5px;
@@ -306,7 +306,7 @@ footer p {
   }
 }
 
-@media (min-width:416px) and (max-width: 767px) {
+@media (min-width:546px) and (max-width: 750px) {
   header h1 {
     font-size: 24px;
   }
@@ -351,12 +351,155 @@ footer p {
   textarea {
     font-size: 10px;
   }
+  #rosyPussyToes {
+    font-size: 5px;
+    color: lightcoral;
+  }
+  .plants {
+    margin-left: 0%;
+  }
+  .about-us {
+    width: 100%;
+    padding-bottom: 20px;
+  }
   footer p {
     font-size: 8px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width:751px) and (max-width: 767px) {
+  header h1 {
+    font-size: 24px;
+  }
+  .header-img {
+    width: 70%;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  .about-us-img {
+    width: 40%;
+    border-radius: 5px;
+  }
+  header h1 span {
+    font-size: 10px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  html,
+  body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: auto; /* Enable vertical scrollbar if necessary */
+    font-size: 10px;
+  }
+  .plant-inventory-container ul,
+  .donated-plants ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  form button[type="submit"],
+  button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 10px;
+  }
+  #rosyPussyToes {
+    font-size: 5px;
+    color: lightcoral;
+  }
+  .plants {
+    margin-left: 15%;
+  }
+  .about-us {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  footer p {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1240px) {
+  header h1 {
+    font-size: 30px;
+  }
+  .header-img {
+    width: 70%;
+    border-radius: 15px;
+    margin-top: 5px;
+  }
+  .about-us-img {
+    width: 40%;
+    border-radius: 15px;
+  }
+  header h1 span {
+    font-size: 10px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  html,
+  body {
+    box-sizing:border-box;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: auto; /* Enable vertical scrollbar if necessary */
+    font-size: 12px;
+  }
+  .plant-inventory-container ul,
+  .donated-plants ul {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  form button[type="submit"],
+  button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 12px;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 12px;
+  }
+  .about-us {
+    margin: 0px auto;
+    width: 80%;
+    text-align: center;
+    list-style-position: inside;
+  }
+  #rosyPussyToes {
+    font-size: 5px;
+    color: lightcoral;
+  }
+  .plants {
+    margin-left: 0%;
+  }
+  ol li {
+    padding-left: 0px;
+    width: 100%;
+    text-align:justify;
+  }
+  footer {
+    padding-top: 3px;
+    padding-bottom: 7px;
+    position: fixed;
+  }
+}
+
+@media (min-width: 1241px) and (max-width: 1280px) {
   header h1 {
     font-size: 30px;
   }
@@ -414,12 +557,12 @@ footer p {
   }
   ol li {
     padding-left: 0px;
-    width: 90%;
+    width: 100%;
     text-align:justify;
   }
   footer {
     padding-top: 3px;
     padding-bottom: 7px;
-    position: relative;
+    position: fixed;
   }
 }
