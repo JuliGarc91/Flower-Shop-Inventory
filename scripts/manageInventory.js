@@ -1,6 +1,5 @@
 // In a browser environment, you typically don't use require or import to load JSON data directly from a file. Instead, you use the Fetch API or other methods to make an HTTP request to the JSON file and retrieve the data. The require or import statements are typically used in server-side JavaScript (Node.js) to load modules or files, and they are not available in the browser.
 
-
 // Function to fetch data from a JSON file
 function fetchDataAndGenerateTemplate() {
     fetch('data/plantInventory.json') // uses the fetch function to make an HTTP request to the specified URL, which is 'data/plantInventory.json'
@@ -35,15 +34,32 @@ function generatePlantTemplate(plantData) {
         const priceInCents = document.createElement("p");
         priceInCents.innerHTML = `<strong>PriceInCents</strong>: ${plant.priceInCents}`;
 
-        const inStockButton = document.createElement("button");
-        inStockButton.classList.add("In-Stock");
-        inStockButton.textContent = plant.inStock ? "In Stock" : "Out of Stock";
+        const inStockSelect = document.createElement("select");
+        inStockSelect.classList.add("In-Stock");
+
+        const inStockOption = document.createElement("option");
+        inStockOption.value = "In Stock";
+        inStockOption.text = "In Stock";
+
+        const outOfStockOption = document.createElement("option");
+        outOfStockOption.value = "Out of Stock";
+        outOfStockOption.text = "Out of Stock";
+
+        inStockSelect.appendChild(inStockOption);
+        inStockSelect.appendChild(outOfStockOption);
+
+        // Set the selected option based on the plant's inStock property
+        if (plant.inStock) {
+            inStockOption.selected = true;
+        } else {
+            outOfStockOption.selected = true;
+        }
 
         listItem.appendChild(emoji);
         listItem.appendChild(commonName);
         listItem.appendChild(dominantColor);
         listItem.appendChild(priceInCents);
-        listItem.appendChild(inStockButton);
+        listItem.appendChild(inStockSelect);
 
         plantList.appendChild(listItem);
     });

@@ -107,6 +107,7 @@ form textarea {
   padding: 5px;
 }
 
+
 form button[type="submit"],
 button {
   background: #73956f;
@@ -127,7 +128,7 @@ button:hover {
   font-size: 10px;
 }
 
-.plant-inventory-container h2,
+
 .donated-plants h2 {
   margin: 25px 0 0;
   text-align: center;
@@ -152,6 +153,10 @@ button:hover {
   list-style: none;
 }
 
+.plant-inventory ul li {
+  padding-right: 2.5%;
+}
+
 .plant-inventory {
   width: 100%;
   text-align: center;
@@ -164,18 +169,13 @@ button:hover {
   border-top: 3px double #73956f;
 }
 
-.plant-inventory ul li {
-  list-style: none;
-  padding-right: 2.5%;
-}
-
-footer nav {
+p nav {
   margin-bottom: 0 auto;
   text-align: center;
   padding-bottom: 20px;
 }
 
-.footer {
+footer {
   height: 2%;
   width: 100%;
   position: fixed;
@@ -183,7 +183,7 @@ footer nav {
   background-color: #17291b;
 }
 
-.footer p {
+footer p {
   margin: 0 auto;
   text-align: center;
   padding-left: 1%;
@@ -191,19 +191,138 @@ footer nav {
   font-size: 12px;
 }
 
-@media (max-width: 780px) {
+@media (min-width: 100px) and (max-width: 415px) {
+  header h1 {
+    font-size: 20px;
+  }
+  .header-img {
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  header h1 span {
+    font-size: 10px;
+  }
+  html,
+  body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: auto; /* Enable vertical scrollbar if necessary */
+    font-size: 10px;
+  }
   .plant-inventory-container ul,
   .donated-plants ul {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  form button[type="submit"],
+  button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 8px;
+  }
+  footer {
+    box-sizing: border-box;
+    position:relative;
   }
 }
 
-@media (max-width: 200px) {
-  h1 {
-    font-size: 20px;
+@media (min-width:416px) and (max-width: 768px) {
+  header h1 {
+    font-size: 24px;
+  }
+  .header-img {
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  header h1 span {
+    font-size: 10px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  html,
+  body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: auto; /* Enable vertical scrollbar if necessary */
+    font-size: 10px;
   }
   .plant-inventory-container ul,
   .donated-plants ul {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  form button[type="submit"],
+  button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 10px;
+  }
+  footer {
+    box-sizing: border-box;
+    position:relative;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 30px;
+  }
+  header h1 span {
+    font-size: 10px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  html,
+  body {
+    box-sizing:border-box;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: auto; /* Enable vertical scrollbar if necessary */
+    font-size: 12px;
+  }
+  .plant-inventory-container ul,
+  .donated-plants ul {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  form button[type="submit"],
+  button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 12px;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 12px;
+  }
+  footer {
+    box-sizing: border-box;
+    position:relative;
+  }
+}
+
