@@ -1,12 +1,11 @@
 html,
 body {
     color:rgb(206, 255, 239);
-    background-color: rgb(53, 90, 77);
+    /* background-color: rgb(53, 90, 77); */
+    background: linear-gradient(rgb(53, 90, 77),rgb(33, 58, 49));
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin:0;
     padding:0;
-    /* border: 3px double #73956f;
-    border-width: 100%; */
 }
 
 h1,
@@ -24,7 +23,8 @@ header {
     width: 100%;
     max-width: 100%;
     min-width: 100%;
-    background: rgb(53, 90, 77);
+    /* background: rgb(53, 90, 77); */
+    background: linear-gradient(rgb(53, 90, 77),rgb(33, 58, 49));
     border-bottom: 3px double #73956f;
     color: rgb(213, 252, 239);
 }
@@ -48,6 +48,7 @@ strong {
   max-width: 30%; 
   border-radius: 35px;
   margin-top: 20px;
+  box-shadow: 3px 3px 3px rgba(10, 39, 22, 0.5);
 }
 
 .img-container {
@@ -117,6 +118,7 @@ button {
   cursor: pointer;
   margin: 10px 0;
   padding: 10px;
+  box-shadow: 3px 3px 3px rgba(10, 39, 22, 0.5);
 }
 
 form button[type="submit"]:hover,
@@ -325,4 +327,3 @@ footer p {
     position:relative;
   }
 }
-
