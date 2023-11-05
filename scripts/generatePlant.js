@@ -24,14 +24,14 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
 
     // creating style here instead of using CSS because CSS isn't showing the style properly on webpage as it does locally
     removeButton.addEventListener("mouseover", function() {
-        this.style.opacity = "90%";
+        this.style.opacity = 0.9;
         this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
         this.style.backgroundSize = "contain";
     });
     
     // Add a mouseout event listener to revert styles
     removeButton.addEventListener("mouseout", function() {
-        this.style.opacity = "100%";
+        this.style.opacity = 1;
         this.style.backgroundImage = "none";
     });
 
@@ -47,7 +47,7 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
         const currentDate = new Date();
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
-        li.innerHTML = `<h3>🌻</h3>
+        li.innerHTML = `<h3>💛</h3>
             <p><strong>Donor</strong>: ${name}</p>
             <p><strong>Common Plant Name</strong>: ${plant}</p>
             <p><strong>Dominant Plant Color</strong>: ${color}</p>
