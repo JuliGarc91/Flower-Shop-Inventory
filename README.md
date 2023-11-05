@@ -7,6 +7,7 @@
 <div align="center">
   <h6>Photo Credit: <em>Chrysanthemum</em> 'Hillside Sheffield Pink' in the Rose Arc Pool by Michael Stewart</h6>
 </div>
+
 # Botanic Haven
 
 Botanic Haven is your go-to destination for exploring a diverse and vibrant collection of botanical wonders. Whether you are an experienced horticulturist or a novice gardener, we have something for everyone.
@@ -55,7 +56,6 @@ At Botanic Haven, we understand the importance of plants in bringing life and be
 Please visit our website and let nature's splendor fill your life with color and serenity. Enjoy your journey into the world of plants at Botanic Haven! 🌱
 
 <div align="center">
-  <h1>Welcome to <em>Botanic Haven</em>!</h1>
 </div>
 <div style="text-align: center;">
 <img src="https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/pussywillow_BB_38634918550.jpg" alt="Japanese Pink Pussy Willow" width="1000"></div>
