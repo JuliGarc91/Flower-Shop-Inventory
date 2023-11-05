@@ -5,7 +5,6 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0px auto;
     padding: 0px auto;
-    /* border: 3px double #73956f; */
 }
 
 h1,
@@ -58,6 +57,8 @@ strong {
   box-shadow: 3px 3px 3px rgba(10, 39, 22, 0.5);
 }
 
+#snakes-head,
+#Parrot-lillies,
 #rosyPussyToes {
   font-size: 8px;
   color: lightcoral;
@@ -178,7 +179,7 @@ button:hover {
 
 .plant-inventory-container ul li,
 .donated-plants ul li {
-  border: 2px dotted #73956f;
+  border: 3px double #73956f;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
@@ -186,20 +187,25 @@ button:hover {
 }
 
 .donated-plants ul li {
-  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/sweetbay_SNS_50019960796.jpg);
+  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/water-lily-Paul_Hariot_MS_51325270039.jpg);
   background-size: cover;
-  /* opacity: 90%; */
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
+.plant-inventory-container ul li {
+  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/sacred-lotus-momo-botan_MS_51307302976.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
 
 .single-plant p {
   border-radius: 5px;
   padding: 5px;
   text-align: center;
   list-style: none;
-  background: rgba(41, 41, 41, 0.52);
+  background: rgba(41, 41, 41, 0.782);
 }
 
 .plant-inventory ul li {
@@ -326,6 +332,10 @@ footer p {
   }
   nav {
     padding-bottom: 5px;
+  }
+
+  footer {
+    padding-bottom: 2px;
   }
   footer p {
     font-size: 5px;

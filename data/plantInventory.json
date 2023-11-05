@@ -13,7 +13,7 @@
   },
   {
     "plantName": "Hudson Bay Currant",
-    "dominantColor": "Fuscia",
+    "dominantColor": "Fuschia",
     "priceInCents": 2377,
     "inStock": true
   },
@@ -600,18 +600,6 @@
     "inStock": false
   },
   {
-    "plantName": "Gray's Lily",
-    "dominantColor": "Black",
-    "priceInCents": 3881,
-    "inStock": false
-  },
-  {
-    "plantName": "Gray's Lily",
-    "dominantColor": "Magenta",
-    "priceInCents": 3730,
-    "inStock": true
-  },
-  {
     "plantName": "Hartweg's Groundsel",
     "dominantColor": "Black",
     "priceInCents": 706,
@@ -628,18 +616,6 @@
     "dominantColor": "Magenta",
     "priceInCents": 890,
     "inStock": false
-  },
-  {
-    "plantName": "Hillside Sheffield Pink",
-    "dominantColor": "Orange",
-    "priceInCents": 1896,
-    "inStock": true
-  },
-  {
-    "plantName": "Hillside Sheffield Pink",
-    "dominantColor": "Pink",
-    "priceInCents": 2096,
-    "inStock": true
   },
   {
     "plantName": "Parrot-lily",
@@ -660,21 +636,9 @@
     "inStock": false
   },
   {
-    "plantName": "Globe Cactus",
-    "dominantColor": "Gray",
+    "plantName": "Snake's Head Fritillary",
+    "dominantColor": "Magenta",
     "priceInCents": 4452,
-    "inStock": true
-  },
-  {
-    "plantName": "Globe Cactus",
-    "dominantColor": "Orange",
-    "priceInCents": 558,
-    "inStock": true
-  },
-  {
-    "plantName": "Globe Cactus",
-    "dominantColor": "Teal",
-    "priceInCents": 4202,
     "inStock": true
   }
 ]

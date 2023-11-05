@@ -25,7 +25,7 @@ function donatedPlantTemplate (name, plant,color,notes) { // fx creates template
     // creating style here instead of using CSS because CSS isn't showing the style properly on webpage as it does locally
     removeButton.addEventListener("mouseover", function() {
         this.style.opacity = 0.9;
-        this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
+        this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)"; // makes button have cool image when mice hovers
         this.style.backgroundSize = "contain";
     });
     
