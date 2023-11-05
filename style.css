@@ -1,6 +1,7 @@
 html,
 body {
-    color:rgb(206, 255, 239);
+    color:rgb(255, 255, 206);
+    /* color:rgb(206, 255, 239); */
     background: linear-gradient(rgb(53, 90, 77),rgb(24, 43, 36));
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0px auto;
@@ -13,6 +14,7 @@ h3,
 h4,
 h5,
 h6 {
+    color:rgb(206, 255, 239);
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin:0;
     text-align: center;
@@ -34,7 +36,8 @@ header h1 {
 }
 
 strong {
-  color:rgb(234, 254, 154);
+  color:rgb(181, 154, 254);
+  /* color:rgb(234, 254, 154); */
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -187,14 +190,16 @@ button:hover {
 }
 
 .donated-plants ul li {
-  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/water-lily-Paul_Hariot_MS_51325270039.jpg);
+  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/camellia-winters-star-snowy_BB_11312791746.jpg);
+  /* background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/water-lily-Paul_Hariot_MS_51325270039.jpg); */
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 .plant-inventory-container ul li {
-  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/sacred-lotus-momo-botan_MS_51307302976.jpg);
+  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/water-lily-Paul_Hariot_MS_51325270039.jpg);
+  /* background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/vine-lilac_MS.jpg); */
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;

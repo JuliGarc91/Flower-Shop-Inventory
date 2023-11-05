@@ -1,3 +1,6 @@
+<div style="text-align: center;">
+  <img src="./images/botanicGarden.jpeg" alt="Botanic Haven" width="400px">
+</div>
 # Botanic Haven
 
 Botanic Haven is your go-to destination for exploring a diverse and vibrant collection of botanical wonders. Whether you are an experienced horticulturist or a novice gardener, we have something for everyone.
@@ -5,23 +8,26 @@ Botanic Haven is your go-to destination for exploring a diverse and vibrant coll
 ## Features
 
 ### Donate a Plant
-- You can donate a plant by filling out a form with the following information:
+- Donors can donate a plant by filling out the fields of the form with the following information:
   - Your full name
   - Plant name
   - Dominant plant color
   - Description (limited to 200 characters)
-- Press the "Donate Plant" button to submit your donation.
-- If you make a mistake, you can clear the form and start over by pressing the "Reset Form" button.
+- Fill out all required fields, otherwise you won't be able to submit your donation and will receive an error message.
+- Press the `Donate Plant` button to submit your donation.
+- If you make a mistake, you can clear the form and start over by pressing the `Reset Form` button.
+
+### View, Hide, and/or Permanently remove Donated Plants
+- Once form is submitted, Donors have the ability to immediately view a record of their donated plants, including those contributed by other donors.
+- Donors can exercise the option to conceal previously donated plants from both prior days and other contributors by utilizing the `Hide from List` button. (Please note that hidden items will reappear upon refreshing the page.)
+- Donors can review or permanently delete a donation made on the same day by selecting the `Remove Today's Donated Plant(s)` button. (Deleted donations are permanently removed from the record.)
 
 ### Inventory Management
-- Visit the inventory section to see what plants are in stock and update their stock status.
-- Inventory managers can update whether a plant in inventory is in stock or not.
+- Visit the inventory section by clicking the `Show Inventory` button to view plant inventory page and update plant stock statuses.
+- Inventory managers can update the status of a plant in inventory by toggling the dropdown menu to indicate whether it is in stock or not.
 
 ### About Us
-- Learn more about our mission and what we offer at Botanic Haven.
-
-### Hide Donated Plants
-- Customers can choose to hide donated plants from previous days.
+- Learn more about our mission and what we offer at Botanic Haven by clicking the `About Us` button and navigating to our "About Us" page.
 
 ### Plant Collection
 Discover a wide range of plant species in our inventory, including:
@@ -42,7 +48,7 @@ At Botanic Haven, we understand the importance of plants in bringing life and be
 
 Please visit our website and let nature's splendor fill your life with color and serenity. Enjoy your journey into the world of plants at Botanic Haven! 🌱
 
-![Botanic Haven](./images/botanicGarden.jpeg)
+<!-- ![Botanic Haven](./images/botanicGarden.jpeg) -->
 
 ## Installation
 
