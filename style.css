@@ -341,10 +341,11 @@ footer p {
   }
 
   footer {
+    padding-top: 2px;
     padding-bottom: 2px;
   }
   footer p {
-    font-size: 5px;
+    font-size: 6px;
   }
 }
 
@@ -405,6 +406,10 @@ footer p {
   .about-us {
     width: 100%;
     padding-bottom: 20px;
+  }
+  footer {
+    padding-top: 5px;
+    padding-bottom: 13px;
   }
   footer p {
     font-size: 7px;
@@ -468,6 +473,9 @@ footer p {
   .about-us {
     width: 100%;
     padding-bottom: 20px;
+  }
+  footer {
+    padding-bottom: 10px;
   }
   footer p {
     font-size: 8px;
@@ -542,8 +550,7 @@ footer p {
   }
   footer {
     padding-top: 3px;
-    padding-bottom: 7px;
-    position: fixed;
+    padding-bottom: 15px;
   }
 }
 
@@ -613,6 +620,5 @@ footer p {
   footer {
     padding-top: 3px;
     padding-bottom: 7px;
-    position: fixed;
   }
 }
