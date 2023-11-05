@@ -55,6 +55,7 @@ Discover a wide range of plant species in our inventory, including:
 At Botanic Haven, we understand the importance of plants in bringing life and beauty to your environment. Whether you're looking to create a colorful, blooming oasis or a serene, green sanctuary, our diverse collection has you covered.
 
 Please visit our website and let nature's splendor fill your life with color and serenity. Enjoy your journey into the world of plants at Botanic Haven! 🌱
+https://juligarc91.github.io/Flower-Shop-Inventory/index.html
 
 <div align="center">
 </div>
@@ -67,7 +68,7 @@ Please visit our website and let nature's splendor fill your life with color and
 
 ## Installation
 
-1. Clone the repository to your local machine.
+1. Fork and Clone the repository to your local machine.
 2. Open the HTML files in your web browser to start exploring.
 
 ## Contributing
