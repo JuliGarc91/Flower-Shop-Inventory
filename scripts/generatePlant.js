@@ -85,3 +85,13 @@ function loadDonatedPlants() {
         ul.appendChild(li);
     });
 }
+
+// --- Event Listeners Structure for reference---
+// specify the type of event you want to listen for (e.g., "click," "keydown," "submit") and provide a function (callback) that should be executed when the event occur
+// Event listeners typically receive an "event object" as a parameter, which contains information about the event
+// const button = document.getElementById('myButton');
+
+// button.addEventListener('click', function() {
+//     console.log('Event type: ' + event.type);
+//     console.log('Event target: ' + event.target);
+// });

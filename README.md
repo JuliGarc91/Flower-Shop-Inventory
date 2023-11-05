@@ -1,5 +1,11 @@
+<div align="center">
+  <h1>Welcome to <em>Botanic Haven</em>!</h1>
+</div>
 <div style="text-align: center;">
-  <img src="./images/botanicGarden.jpeg" alt="Botanic Haven" width="400px">
+<img src="https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/Chrysanthemum_50509390263_MS.jpg" alt="Chrysanthemum" width="1000"></div>
+
+<div align="center">
+  <h6>Photo Credit: <em>Chrysanthemum</em> 'Hillside Sheffield Pink' in the Rose Arc Pool by Michael Stewart</h6>
 </div>
 # Botanic Haven
 
@@ -48,7 +54,15 @@ At Botanic Haven, we understand the importance of plants in bringing life and be
 
 Please visit our website and let nature's splendor fill your life with color and serenity. Enjoy your journey into the world of plants at Botanic Haven! 🌱
 
-<!-- ![Botanic Haven](./images/botanicGarden.jpeg) -->
+<div align="center">
+  <h1>Welcome to <em>Botanic Haven</em>!</h1>
+</div>
+<div style="text-align: center;">
+<img src="https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/pussywillow_BB_38634918550.jpg" alt="Japanese Pink Pussy Willow" width="1000"></div>
+
+<div align="center">
+  <h6>Photo Credit: <em>Japanese Pink Pussy Willow</em> 'Salix gracilistyla' in the Water Garden by Blanca Begert</h6>
+</div>
 
 ## Installation
 
