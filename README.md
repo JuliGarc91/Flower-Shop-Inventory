@@ -25,10 +25,11 @@ Botanic Haven is your go-to destination for exploring a diverse and vibrant coll
 - If you make a mistake, you can clear the form and start over by pressing the `Reset Form` button.
 
 ### View, Hide, and/or Permanently remove Donated Plants
-- Once form is submitted, Donors have the ability to immediately view a record of their donated plants, including those contributed by other donors.
+- Once form is submitted, donors have the ability to immediately view a record of their donated plants, including those contributed by other donors.
 - Donors can also see the updated total of amount of donated plants currently displayed.
-- Donors can exercise the option to conceal previously donated plants from both prior days and other contributors by utilizing the `Hide from List` button. (Please note that hidden items will reappear upon refreshing the page.)
-- Donors can review or permanently delete a donation made on the same day by selecting the `Remove Today's Donated Plant(s)` button. (Deleted donations are permanently removed from the record.)
+- Inventory managers and donors can toggle the 'in stock' drop-down menu and select options to indicate and update whether the donated plant is in stock in the plant inventory.
+- Donors can exercise the option to conceal previously donated plants from both prior days and other contributors by utilizing the `Hide from List` button. Please note that hidden items will reappear upon refreshing the page.
+- Donors can delete a donation made on the same day by selecting the `Remove Today's Donated Plant(s)` button. Deleted donations are permanently removed from the donated plants list on webpage.
 
 ### Inventory Management
 - Visit the inventory section by clicking the `Show Inventory` button to view plant inventory page and update plant stock statuses.
@@ -54,8 +55,9 @@ Discover a wide range of plant species in our inventory, including:
 
 At Botanic Haven, we understand the importance of plants in bringing life and beauty to your environment. Whether you're looking to create a colorful, blooming oasis or a serene, green sanctuary, our diverse collection has you covered.
 
-Please visit our website and let nature's splendor fill your life with color and serenity. Enjoy your journey into the world of plants at Botanic Haven! 🌱
-https://juligarc91.github.io/Flower-Shop-Inventory/index.html
+Please <a href="https://juligarc91.github.io/Flower-Shop-Inventory/index.html">visit our website</a> and let nature's splendor fill your life with color and serenity. Enjoy your journey into the world of plants at Botanic Haven! 🌱
+
+Our website: https://juligarc91.github.io/Flower-Shop-Inventory/index.html
 
 <div align="center">
 </div>
