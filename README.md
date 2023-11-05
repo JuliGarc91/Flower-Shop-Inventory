@@ -26,6 +26,7 @@ Botanic Haven is your go-to destination for exploring a diverse and vibrant coll
 
 ### View, Hide, and/or Permanently remove Donated Plants
 - Once form is submitted, Donors have the ability to immediately view a record of their donated plants, including those contributed by other donors.
+- Donors can also see the updated total of amount of donated plants currently displayed.
 - Donors can exercise the option to conceal previously donated plants from both prior days and other contributors by utilizing the `Hide from List` button. (Please note that hidden items will reappear upon refreshing the page.)
 - Donors can review or permanently delete a donation made on the same day by selecting the `Remove Today's Donated Plant(s)` button. (Deleted donations are permanently removed from the record.)
 
