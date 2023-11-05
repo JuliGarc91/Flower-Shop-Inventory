@@ -35,7 +35,7 @@ header h1 {
 }
 
 strong {
-  color:rgb(196, 244, 3);
+  color:rgb(234, 254, 154);
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -199,7 +199,7 @@ button:hover {
   padding: 5px;
   text-align: center;
   list-style: none;
-  background: rgba(12, 62, 33, 0.398);
+  background: rgba(41, 41, 41, 0.52);
 }
 
 .plant-inventory ul li {
