@@ -8,7 +8,7 @@
   <h6>Photo Credit: <em>Chrysanthemum</em> 'Hillside Sheffield Pink' in the Rose Arc Pool by Michael Stewart</h6>
 </div>
 
-# Botanic Haven
+## Description
 
 Botanic Haven is your go-to destination for exploring a diverse and vibrant collection of botanical wonders. Whether you are an experienced horticulturist or a novice gardener, we have something for everyone.
 
