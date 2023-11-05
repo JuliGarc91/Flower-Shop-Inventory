@@ -93,7 +93,7 @@ main {
 }
 
 .new-plant-form {
-    padding: 25px 25px;
+    padding: 40px 40px;
     width: 70%;
     text-align: center;
 }
@@ -190,16 +190,15 @@ button:hover {
 }
 
 .donated-plants ul li {
-  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/camellia-winters-star-snowy_BB_11312791746.jpg);
-  /* background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/water-lily-Paul_Hariot_MS_51325270039.jpg); */
+  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/harlequin-glory-bower_MS_52359011472.jpg);
+  filter: saturate(90%);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 .plant-inventory-container ul li {
-  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/water-lily-Paul_Hariot_MS_51325270039.jpg);
-  /* background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/vine-lilac_MS.jpg); */
+  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/blackberry-lily_MS_50397559346_1.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -288,7 +287,7 @@ footer p {
     border-radius: 5px;
   }
   h2 {
-    font-size: 14px;
+    font-size: 13px;
   }
   header h1 span {
     font-size: 10px;
@@ -297,7 +296,7 @@ footer p {
   body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
     overflow-y: auto; /* Enable vertical scrollbar if necessary */
-    font-size: 10px;
+    font-size: 8px;
   }
   .plant-inventory-container ul,
   .donated-plants ul {
@@ -317,13 +316,15 @@ footer p {
   button {
     margin: 5px;
     padding: 5px;
-    font-size: 10px;
+    font-size: 8px;
   }
   input,
   select,
   textarea {
     font-size: 8px;
   }
+  #snakes-head,
+  #Parrot-lillies,
   #rosyPussyToes {
     font-size: 5px;
     color: lightcoral;
@@ -349,7 +350,7 @@ footer p {
 
 @media (min-width:546px) and (max-width: 750px) {
   header h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
   .header-img {
     width: 70%;
@@ -364,13 +365,13 @@ footer p {
     font-size: 10px;
   }
   h2 {
-    font-size: 16px;
+    font-size: 14px;
   }
   html,
   body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
     overflow-y: auto; /* Enable vertical scrollbar if necessary */
-    font-size: 10px;
+    font-size: 9px;
   }
   .plant-inventory-container ul,
   .donated-plants ul {
@@ -385,13 +386,15 @@ footer p {
   button {
     margin: 5px;
     padding: 5px;
-    font-size: 10px;
+    font-size: 9px;
   }
   input,
   select,
   textarea {
-    font-size: 10px;
+    font-size: 9px;
   }
+  #snakes-head,
+  #Parrot-lillies,
   #rosyPussyToes {
     font-size: 5px;
     color: lightcoral;
@@ -404,7 +407,7 @@ footer p {
     padding-bottom: 20px;
   }
   footer p {
-    font-size: 8px;
+    font-size: 7px;
   }
 }
 
@@ -453,6 +456,8 @@ footer p {
   textarea {
     font-size: 10px;
   }
+  #snakes-head,
+  #Parrot-lillies,
   #rosyPussyToes {
     font-size: 5px;
     color: lightcoral;
@@ -521,6 +526,8 @@ footer p {
     text-align: center;
     list-style-position: inside;
   }
+  #snakes-head,
+  #Parrot-lillies,
   #rosyPussyToes {
     font-size: 5px;
     color: lightcoral;
@@ -592,6 +599,8 @@ footer p {
     text-align: center;
     list-style-position: inside;
   }
+  #snakes-head,
+  #Parrot-lillies,
   #rosyPussyToes {
     font-size: 5px;
     color: lightcoral;
