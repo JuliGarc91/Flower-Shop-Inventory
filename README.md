@@ -27,7 +27,7 @@ Botanic Haven is your go-to destination for exploring a diverse and vibrant coll
 ### View, Hide, and/or Permanently remove Donated Plants
 - Once form is submitted, donors have the ability to immediately view a record of their donated plants, including those contributed by other donors.
 - Donors can also see the updated total of amount of donated plants currently displayed.
-- Donors have the capability to access the 'in stock' drop-down menu and make selections to effectively indicate and maintain the status of donated plants within the plant inventory. It is important to note that donors are permitted to modify the inStock status of plants donated on the same month to ensure the accurate processing of their contributions. This measure is in place to facilitate error-free management of your contributions. 
+- Donors have the capability to access the 'in stock' drop-down menu and make selections to effectively indicate and maintain the status of donated plants within the plant inventory. It is important to note that donors are permitted to modify the inStock status of plants donated in the current month to ensure the accurate processing of their contributions. This measure is in place to facilitate error-free management of your contributions. 
 - Donors can exercise the option to conceal previously donated plants from both prior days and other contributors by utilizing the `Hide from List` button. To make hidden plants reappear click the `Unhide Plants` button or refresh the page.
 - Donors can delete a donation made on the same day by selecting the `Remove Today's Donated Plant(s)` button. Deleted donations are permanently removed from the donated plants list on webpage.
 
