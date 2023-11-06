@@ -20,7 +20,8 @@ form.addEventListener("submit", (event) => {
 // ---------- HARDCODED REMOVE BUTTON FUNCTIONALITY ---------- 
 // to add functionality where hardcoded listItems can be removed (these list items are single plants donated to the inventory)
 
-const listItems = document.querySelectorAll("li"); // querySelectAll is a method that returns all element descendants of node that match selectors (data type of output is an array so we can iterate through it)
+const listItems = document.querySelectorAll("button"); // querySelectAll is a method that returns all element descendants of node that match selectors (data type of output is an array so we can iterate through it)
+// fixed the bug by changing "li" to "button"
 for (item of listItems) {
     item.addEventListener("click", (event) => {
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete li element with class "single-plant" closest to the button's parent since button is inside li element with that particular class
