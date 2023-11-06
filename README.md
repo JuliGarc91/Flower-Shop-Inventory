@@ -28,12 +28,12 @@ Botanic Haven is your go-to destination for exploring a diverse and vibrant coll
 - Once form is submitted, donors have the ability to immediately view a record of their donated plants, including those contributed by other donors.
 - Donors can also see the updated total of amount of donated plants currently displayed.
 - Inventory managers and donors can toggle the 'in stock' drop-down menu and select options to indicate and update whether the donated plant is in stock in the plant inventory.
-- Donors can exercise the option to conceal previously donated plants from both prior days and other contributors by utilizing the `Hide from List` button. Please note that hidden items will reappear upon refreshing the page.
+- Donors can exercise the option to conceal previously donated plants from both prior days and other contributors by utilizing the `Hide from List` button or simply clicking anywhere on the card. Please note that hidden items will reappear upon refreshing the page.
 - Donors can delete a donation made on the same day by selecting the `Remove Today's Donated Plant(s)` button. Deleted donations are permanently removed from the donated plants list on webpage.
 
 ### Inventory Management
-- Visit the inventory section by clicking the `Show Inventory` button to view plant inventory page and update plant stock statuses.
-- Inventory managers can update the status of a plant in inventory by toggling the dropdown menu to indicate whether it is in stock or not.
+- Visit the inventory section by clicking the `Show Inventory` button to navigate to and view the plant inventory.
+- Inventory managers can update the stock status of a plant in inventory by toggling the dropdown menu to indicate whether it is in stock or not.
 
 ### About Us
 - Learn more about our mission and what we offer at Botanic Haven by clicking the `About Us` button and navigating to our "About Us" page.

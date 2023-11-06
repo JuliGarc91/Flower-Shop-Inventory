@@ -20,6 +20,13 @@ h6 {
     text-align: center;
 }
 
+.instructions {
+  width: 60%;
+  margin: auto;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
 header {
     width: 100%;
     max-width: 100%;
@@ -157,6 +164,11 @@ button:hover {
   font-size: 10px;
 }
 
+select[disabled] {
+  background-color: #f0f0f0;
+  color: #999;
+}
+
 .donated-plants h2 {
   margin: 25px 0 0;
   text-align: center;
@@ -238,7 +250,7 @@ button:hover {
   width: 70%;
   text-align: center;
   list-style-position: inside;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
 }
 .plants {
   display: grid;
