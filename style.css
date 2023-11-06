@@ -288,7 +288,7 @@ footer p {
   font-size: 10px;
 }
 
-@media (min-width: 200px) and (max-width: 545px) {
+@media (min-width: 250px) and (max-width: 545px) {
   header h1 {
     font-size: 20px;
   }
@@ -313,19 +313,22 @@ footer p {
     overflow-y: auto; /* Enable vertical scrollbar if necessary */
     font-size: 8px;
   }
+  .main-container {
+    margin: auto;
+    grid-template-columns: 1fr;
+  }
+  .new-plant-form {
+    margin: auto;
+    padding-bottom: 0px;
+}
   .plant-inventory-container ul,
   .donated-plants ul {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    /* gap: 1rem;
     list-style: none;
     padding-left: 0;
-    margin: 0;
-  }
-  .new-plant-form {
-    padding-left:10px;
-    width: 80%;
-    text-align: center;
+    margin: 0; */
   }
   form button[type="submit"],
   button {
