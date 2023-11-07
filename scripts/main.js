@@ -20,8 +20,9 @@ form.addEventListener("submit", (event) => {
 // ---------- HARDCODED REMOVE BUTTON FUNCTIONALITY ---------- 
 // to add functionality where hardcoded listItems can be removed (these list items are single plants donated to the inventory)
 
-const listItems = document.querySelectorAll("button"); // querySelectAll is a method that returns all element descendants of node that match selectors (data type of output is an array so we can iterate through it)
+const listItems = document.querySelectorAll("li button"); // querySelectAll is a method that returns all element descendants of node that match selectors (data type of output is an array so we can iterate through it)
 // fixed the bug by changing "li" to "button" - ensures clicking just the button (not anywhere else) will hide the plant card
+// fixed main.js:27 Uncaught TypeError: Cannot read properties of null (reading 'remove') at HTMLButtonElement.<anonymous> (main.js:27:46) by changing "button" to "li button" since li is after .single-plant tag but before button tag
 for (item of listItems) {
     item.addEventListener("click", (event) => {
         event.target.closest(".single-plant").remove(); // when button is clicked it'll delete button element with class "single-plant" closest to the button's parent since button is inside that particular class
