@@ -321,7 +321,9 @@ footer p {
   .new-plant-form {
     margin: auto;
     padding-bottom: 0px;
-}
+    width: 100%;
+    padding-left: 0px;
+  }
   .plant-inventory-container ul,
   .donated-plants ul {
     display: grid;
