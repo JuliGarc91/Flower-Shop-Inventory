@@ -52,6 +52,14 @@ strong {
   padding-left: 10px;
 }
 
+.landing-img {
+  opacity: 90%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image covers the entire container while maintaining its aspect ratio */
+}
+
+
 .header-img {
   width: 30%;
   max-width: 30%; 
