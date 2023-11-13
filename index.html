@@ -13,110 +13,31 @@
     <header>
         <div class ="img-container">
             <img class="header-img" src="./images/botanicGarden.jpeg" alt="Monarch Butterfly on Local Plant Species">
-        </div><h1>Welcome to <i>Botanic Haven</i>!<br>
-            <span class="plant-count">(Donated Plants on Display 🤍: 3)</span></h1>
-            <p class="instructions" align="center">Thank you for visiting our plant donation platform. Please take a moment to complete the donation form, as your support contributes to the development of a vibrant sanctuary that celebrates the beauty of nature. As a cherished contributor, you can conveniently manage and update the in-stock status of the plants you've donated within the same month, alongside contributions from others in our community. Your involvement in keeping our collection up-to-date each month ensures its continuous refreshment. Please note that you can only remove the plants you submitted with the form for the current date. We sincerely appreciate your valuable contribution! 🌱</p>            
+        </div><h1>Welcome to <i>Botanic Haven</i>!</h1>
+            <p class="instructions" align="center"></p>            
             <nav>
+
+                <a href="./donatePlant.html"><button onmouseover="this.style.opacity='80%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Donate Plants 🍁</button></a>
                 <a href="./plantInventory.html"><button onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Inventory 🌷</button></a>
                 <a href="./aboutBotanicHaven.html"><button onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">About Us 🐝</button></a>
-                <a href="./index.html"><button onmouseover="this.style.opacity='80%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Unhide Plants 🍁</button></a>
             </nav>
     </header>
 
     <main>
         <!-- Creating Form -->
-    <section class="main-container">
-        <section class="new-plant-form">
-            <h2>Donate Local Plants 🦋</h2>
-            <form id="new-plant">
-                <label for="name">
-                    Donor<span class="required">*</span>
-                    <input id="name" name="name" type="text" placeholder="Your Full Name" required/>
-                </label>
-                <label for="plant">
-                    Plant Name<span class="required">*</span>
-                    <select id="plant" name="plant" required>
-                        <option value="" disabled selected>Select a Plant</option>
-                    </select>
-                </label> 
-                <label for="color">
-                    Color<span class="required">*</span>
-                    <select id="color" name="color" required>
-                        <option value="" disabled selected>Select a Color</option>
-                    </select>
-                </label>  
-                <label for="notes">
-                    Description 💚<textarea id="notes" type="notes" placeholder="Write short description..." maxlength="200"></textarea>
-                </label><p id="char-count">Characters left: 200</p>
-                <button type="submit" onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Donate Plant</button>
-                <button type="reset" onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Reset Form</button>
-            </form>
-        </section>
+    <section>
+    </section>
         <!-- Rendering Donated Plant (for reference) but should be dynamic -->
-        <section class="donated-plants">
-            <h2>All Donated Plants 🦋</h2>
-            <br>
-            <ul>
-                <li class="single-plant">
-                    <h3>💛</h3>
-                    <p><strong>Donor</strong>: Carmela Soprano</p>
-                    <p><strong>Common Plant Name</strong>: Rosy Pussytoes</p>
-                    <p><strong>Dominant Plant Color</strong>: Maroon</p>
-                    <p><strong>In Stock?</strong>
-                        <select disabled>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                        </select>
-                    </p>                    
-                    <p><strong>Notes</strong>: These maroon-hued beauties add a touch of elegance to any garden.</p>
-                    <p id="date"><strong>Donated</strong>: <span id="current-date">July 23, 2023</span></p>
-                    <button onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Hide from List</button>
-                    <!-- hardcoded button style because not rendering properly on webpage (even though it does locally) with CSS -->
-                </li>
-                <li class="single-plant">
-                    <h3>💛</h3>
-                    <p><strong>Donor</strong>: The Notorious B.I.G</p>
-                    <p><strong>Common Plant Name</strong>: Dentate False Pennyroyal</p>
-                    <p><strong>Dominant Plant Color</strong>: Red</p>
-                    <p><strong>In Stock?</strong>
-                        <select disabled>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                        </select>
-                    </p>                    
-                    <p><strong>Notes</strong>: Fiery red leaves that bring a burst of color to your landscape.</p>
-                    <p id="date"><strong>Donated</strong>: <span id="current-date">August 10, 2023</span></p>
-                    <button onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Hide from List</button>
-                </li>
-                <li class="single-plant">
-                    <h3>💛</h3>
-                    <p><strong>Donor</strong>: Dr. Gregory House</p>
-                    <p><strong>Common Plant Name</strong>: Dot Lichen</p>
-                    <p><strong>Dominant Plant Color</strong>: Crimson</p>
-                    <p><strong>In Stock?</strong>
-                        <select>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                        </select>
-                    </p>                    
-                    <p><strong>Notes</strong>: With deep crimson hues, these lichens are nature's artwork.</p>
-                    <p id="date"><strong>Donated</strong>: <span id="current-date">Nov 1, 2023</span></p>
-                    <!-- <button onmouseover="this.style.opacity='90%'; this.style.backgroundImage='url(/images/japaneseMaple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Hide from List</button> -->
-                    <button onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Hide from List</button>
-                </li>
-            </ul>
-        </section>
+    <section>
     </section>
     <br>
     <section class="plant-inventory">
         <h2>🌻</h2><br>
                 <nav>
+                    <a href="./donatePlant.html"><button onmouseover="this.style.opacity = '90%'; this.style.backgroundImage = 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize = 'contain';" onmouseout="this.style.opacity = '100%'; this.style.backgroundImage = 'none';">Donate Plants 🌸</button></a>
                     <!-- Commented out the local links because it only works locally for some reason even though files are pushed to github -->
                     <a href="./plantInventory.html"><button onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Inventory 🌷</button></a>
                     <a href="./aboutBotanicHaven.html"><button onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">About Us 🐝</button></a>
-                    <a href="./index.html"><button onmouseover="this.style.opacity='80%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Unhide Plants 🍁</button></a>
-                    <!-- <a href="./plantInventory.html"><button onmouseover="this.style.opacity='90%'; this.style.backgroundImage='url(/images/japaneseMaple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Show Inventory 🌷</button></a>
-                    <a href="./aboutBotanicHaven.html"><button onmouseover="this.style.opacity='90%'; this.style.backgroundImage='url(/images/japaneseMaple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">About Us 🦋</button></a> -->
                 </nav>
                 <br><br>
     </section>

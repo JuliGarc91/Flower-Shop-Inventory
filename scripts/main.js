@@ -1,5 +1,5 @@
 // ------ ATTACHING JAVASCRIPT TO HTML ------
-// grabbing form from index.html
+// grabbing form from form tag in html code (donatePlant.html)
 const form = document.querySelector("form");
 
 // ---------- SUBMIT BUTTON FUNCTIONALITY ---------- 
