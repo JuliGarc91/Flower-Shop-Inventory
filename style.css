@@ -271,6 +271,17 @@ nav {
   text-align: center;
 }
 
+/* Add these styles for button hover effects */
+nav a button {
+  transition: opacity 0.3s ease, background-image 0.3s ease, background-size 0.3s ease;
+}
+
+nav a button:hover {
+  opacity: 90%;
+  background-image: url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg);
+  background-size: contain;
+}
+
 footer {
   height: 2%;
   width: 100%;
