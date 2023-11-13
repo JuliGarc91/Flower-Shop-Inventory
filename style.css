@@ -49,7 +49,7 @@ strong {
 }
 
 .plant-count {
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 
 .landing-img {
@@ -58,7 +58,6 @@ strong {
   height: 100%;
   object-fit: cover; /* This ensures the image covers the entire container while maintaining its aspect ratio */
 }
-
 
 .header-img {
   width: 30%;
