@@ -7,18 +7,18 @@ This proposal envisions the enhancement of the Botanic Haven website, introducin
 
 **As a user** of the *Botanic Haven* website I want to...so I can contribute to the local community and ecosystem easily from my desktop or mobile device (or in person if I choose to).
 
-1. **See engaging visuals of local plants available at Botanic Haven**
+1. **...see engaging visuals of local plants available at Botanic Haven**
    - The landing page, index.html, will showcase captivating visuals, presenting the diverse botanical wonders at Botanic Haven.
    - aboutBotanicHaven.html page will contain more information about Botanic Haven
-2. **Learn about when and where I can visit the physical garden to view plant inventory and donate plants**
+2. **...learn about when and where I can visit the physical garden to view plant inventory and donate plants**
    - The landing page will include info on hours of operation, physical location, and contact information
-3. **Become a contributor by filling out a form to donate plants and manage inventory**
+3. **...become a contributor by filling out a form to donate plants and manage inventory**
    - A form on the landing page allows visitors to become contributors instantly (buttons to navigate to donatePlant.html and plantInventory.html are revealed upon form submission)
    - API Call when submitting form (to donate a plant) on donatePlant.html
-4. **Manage inventory online**
+4. **...manage inventory online**
    - Fetch data from API to populate collection and append to plantInventory.html
    - Users can toggle inStock dropdown menu
-5. **Use the website seamlessly from a mobile device as well as desktop**
+5. **...use the website seamlessly from a mobile device as well as desktop**
    - Adding media queries to CSS style sheet to adjust webpage according to screen sizes of mobile devices
 
 ### Personas
