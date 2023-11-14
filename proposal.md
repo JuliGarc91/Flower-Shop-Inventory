@@ -11,7 +11,7 @@
    - *As a visitor, I desire the option to become a contributor to actively participate in Botanic Haven's initiatives.*
      - **Acceptance Criteria:**
        - The contributor form should be easily accessible on the landing page.
-       - Upon completion, redirect to both donatePlant.html and plantInventory.html pages.
+       - Upon completion, both donatePlant.html and plantInventory.html pages become accessible to visitor (who is now a contributor).
 
 3. **Explore Activities**
    - *As a visitor, I want to understand the available activities at Botanic Haven directly from the landing page.*
