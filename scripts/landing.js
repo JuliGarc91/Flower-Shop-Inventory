@@ -11,17 +11,17 @@ fetch(`https://perenual.com/api/species-list?key=${API_KEY}`)
 // Function to create a slideshow from the fetched data
 function createSlideshow(data) {
     // Get the slideshow container element
-    var container = document.getElementById('slideshow-container');
+    const container = document.getElementById('slideshow-container');
 
     // Loop through each item in the data
     data.forEach(function (item) {
         // Create a slide element
-        var slide = document.createElement('div');
+        const slide = document.createElement('div');
         slide.className = 'mySlides';
 
         // Check if the item has a valid image, and if so, create and append an image element
         if (item.default_image && item.default_image.regular_url) {
-            var img = document.createElement('img');
+            const img = document.createElement('img');
             img.src = item.default_image.regular_url;
 
             slide.appendChild(img);
@@ -33,20 +33,17 @@ function createSlideshow(data) {
     });
 
     // Create and append navigation buttons
-    var prev = document.createElement('a');
+    const prev = document.createElement('a');
     prev.className = 'prev';
-    prev.innerHTML = '&#10094;';
-    prev.onclick = function () {
-        plusSlides(-1);
-    };
+    prev.innerHTML = '&#10094;'; // Set the inner HTML of the previous button to a Unicode character for a left-pointing triangle 
+    prev.onclick =  () => plusSlides(-1); // cannot write it as prev.onclick = plusSlides(-1); because it would immediately call the plusSlides function and assign its return value to next.onclick. It's better to assign a function to next.onclick that will be called when the onclick event occurs
     container.appendChild(prev);
 
-    var next = document.createElement('a');
+    const next = document.createElement('a');
     next.className = 'next';
-    next.innerHTML = '&#10095;';
-    next.onclick = function () {
-        plusSlides(1);
-    };
+    next.innerHTML = '&#10095;'; // Set the inner HTML of the next button to a Unicode character for a right-pointing triangle
+    next.onclick = () => plusSlides(1); // cannot write it as next.onclick = plusSlides(1); because it would immediately call the plusSlides function and assign its return value to next.onclick. It's better to assign a function to next.onclick that will be called when the onclick event occurs
+
     container.appendChild(next);
 
     // Display the first slide
@@ -54,7 +51,7 @@ function createSlideshow(data) {
 }
 
 // Variable to keep track of the current slide index
-var slideIndex = 1;
+let slideIndex = 1;
 
 // Function to navigate to the previous or next slide
 function plusSlides(n) {
@@ -63,8 +60,8 @@ function plusSlides(n) {
 
 // Function to display the specified slide
 function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName('mySlides');
+    let i;
+    const slides = document.getElementsByClassName('mySlides');
 
     // Handle cases where the index exceeds the number of slides
     if (n > slides.length) {

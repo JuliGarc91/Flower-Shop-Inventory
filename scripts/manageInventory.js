@@ -64,10 +64,7 @@ function generatePlantTemplate(plantData) {
         plantList.appendChild(listItem);
     });
 
-    
-
-    // this part 
-    const plantInventorySection = document.querySelector(".plant-inventory-container"); // find and select an HTML element with class "plant-inventory-container" and store in 'plantInventorySection'
-    plantInventorySection.innerHTML = ""; // Clear any existing content
-    plantInventorySection.appendChild(plantList);
+    const plantInventorySection = document.querySelector(".plant-inventory-container"); // find and select an HTML element with class "plant-inventory-container" and store in 'plantInventorySection' this is the entire section that contains all the plant items
+    plantInventorySection.innerHTML = ""; // Clear any existing content in html i this section to replace with plantList which contains the list of plants generated from the fetched data to the section with class .plant-inventory-container which is now saved to a variable
+    plantInventorySection.appendChild(plantList); // this appends the ul plantList items (with li listItems) to the section
 }

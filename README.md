@@ -12,7 +12,18 @@
 
 Botanic Haven is your go-to destination for exploring a diverse and vibrant collection of botanical wonders. Whether you are an experienced horticulturist or a novice gardener, we have something for everyone.
 
+## Installation
+
+1. Fork and Clone the repository to your local machine.
+2. Open the HTML files in your web browser to start exploring.
+
 ## Features
+### View Landing Page (New)
+- Explore our newly designed landing page, offering an enticing introduction to the world of botanical wonders at Botanic Haven.
+
+### Contributor Onboarding and Collection Management (New)
+- Utilize the updated form on the landing page to seamlessly transition into a contributor role.
+- Manage and update our extensive plant collection for a dynamic repository.
 
 ### Donate a Plant
 - Donors can donate a plant by filling out the fields of the form with the following information:
@@ -67,15 +78,6 @@ Our website: https://juligarc91.github.io/Flower-Shop-Inventory/index.html
 <div align="center">
   <h6>Photo Credit: <em>Japanese Pink Pussy Willow</em> 'Salix gracilistyla' in the Water Garden by Blanca Begert</h6>
 </div>
-
-## Installation
-
-1. Fork and Clone the repository to your local machine.
-2. Open the HTML files in your web browser to start exploring.
-
-## Contributing
-
-If you're interested in contributing to Botanic Haven, please check out our [contribution guidelines](CONTRIBUTING.md).
 
 ## License
 
