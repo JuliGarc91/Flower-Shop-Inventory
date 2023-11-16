@@ -132,7 +132,7 @@ function replaceFormWithButtons() {
         donateButtonText: donateButton.textContent,
         donateButtonClass: donateButton.className,
         inventoryButtonText: inventoryButton.textContent,
-        inventoryButtonClass: inventoryButton.className
+        inventoryButtonClass: inventoryButton.className,
 
     };
 
@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Append buttons to the document body or any desired location
         document.getElementById("landing-header-buttons").appendChild(donateButton);
         document.getElementById("landing-header-buttons").appendChild(inventoryButton);
+        volunteerForm.style.display = "none"; // makes sure form stays hidden when going back to home
     }
 });
 
