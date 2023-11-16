@@ -17,11 +17,25 @@
         <h1>Welcome to <i>Botanic Haven</i>!</h1>
         <nav id="landing-header-buttons">
             <a href="./aboutBotanicHaven.html"><button>About Us 🐝</button></a>
+            <!-- Once Volunteer submit button is clicked 2 more buttons will populate here using fx in landing.js -->
         </nav>
     </header>
 
     <main>
         <section>
+            <section class="visit">
+                <h2>Plan a Visit</h2>
+                <ul>
+                    <li>Monday: 9:00 AM - 5:00 PM</li>
+                    <li>Tuesday: 9:00 AM - 5:00 PM</li>
+                    <li>Wednesday: 9:00 AM - 5:00 PM</li>
+                    <li>Thursday: 9:00 AM - 5:00 PM</li>
+                    <li>Friday: 9:00 AM - 5:00 PM</li>
+                    <li>Saturday: 10:00 AM - 7:00 PM</li>
+                    <li>Sunday: 10:00 AM - 3:00 PM</li>
+                </ul>
+            </section>
+            <h2>Become a Contributor</h2>
             <form id="volunteerForm">
                 <label for="fullName">Full Name:<span class="required">*</span>
                 <input type="text" id="fullName" name="fullName" required>
@@ -42,23 +56,25 @@
                 <button type="submit">Volunteer</button>
             </form>
         </section>
-
         <section>
+            <h2>Plants in Our Haven</h2>
             <div id="slideshow-container">
                 <!-- Slides will be added dynamically here -->
             </div>
         </section>
-
-        <br>
-        
-        <section class="plant-inventory">
-            <h2>🌻</h2><br>
-            <nav>
-                <a href="./aboutBotanicHaven.html"><button>About Us 🐝</button></a>
-            </nav>
+        <section>
+            <p>Embark on a journey through a world of botanical wonders that awaits you. Immerse yourself in the beauty of our curated collections right here on our landing page. For a more profound experience, consider making a physical visit to our garden, where you can explore the vast richness of our extensive plant collection.</p>
         </section>
-    </main>
 
+    </main>
+    <section class="plant-inventory">
+        <h2>🌻</h2><br>
+        <p>123 Garden Lane
+            Botanica City, FL 54321
+            United States</p>
+        <p>Phone Number:
+            555-123-4567</p>
+    </section>
     <footer class="footer">
         <p>© 2023 YourRegisteredBotanicHaven®. All rights reserved.</p>
     </footer>
