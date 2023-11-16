@@ -84,7 +84,7 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = 'block';
 }
 
-// Function to replace a form with buttons
+// Function to replace a form with buttons that navigate to plantInventory.html and donatePlant.html when clicking "Volunteer" submit form button
 function replaceFormWithButtons() {
     // Get the form and buttons elements
     const volunteerForm = document.getElementById("volunteerForm");
@@ -94,7 +94,9 @@ function replaceFormWithButtons() {
     // Set attributes for the donate button
     donateButton.className = "hidden-button";
     donateButton.textContent = "Donate Plants 🌸";
-    donateButton.href = "./donatePlant.html";
+    donateButton.addEventListener("click", function () {
+        window.location.href = "./donatePlant.html";
+    });
     donateButton.addEventListener("mouseover", function () {
         this.style.opacity = "90%";
         this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
@@ -108,7 +110,9 @@ function replaceFormWithButtons() {
     // Set attributes for the inventory button
     inventoryButton.className = "hidden-button";
     inventoryButton.textContent = "Inventory 🌷";
-    inventoryButton.href = "./plantInventory.html";
+    inventoryButton.addEventListener("click", function () {
+        window.location.href = "./plantInventory.html";
+    });
     inventoryButton.addEventListener("mouseover", function () {
         this.style.opacity = "90%";
         this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
@@ -125,26 +129,108 @@ function replaceFormWithButtons() {
     // Append buttons to the document body
     document.getElementById("landing-header-buttons").appendChild(donateButton);
     document.getElementById("landing-header-buttons").appendChild(inventoryButton);
+
+    // Save relevant information to localStorage
+    const buttonsData = {
+        donateButtonText: donateButton.textContent,
+        donateButtonClass: donateButton.className,
+        inventoryButtonText: inventoryButton.textContent,
+        inventoryButtonClass: inventoryButton.className
+
+    };
+
+    localStorage.setItem('buttonsData', JSON.stringify(buttonsData));
 }
+// retrieve the data from localStorage and use it to recreate the buttons
+document.addEventListener('DOMContentLoaded', function () {
+    // Retrieve data from localStorage
+    const storedData = localStorage.getItem('buttonsData');
+
+    if (storedData) {
+        const buttonsData = JSON.parse(storedData);
+
+        // Recreate buttons with stored data
+        const donateButton = document.createElement("button");
+        donateButton.className = buttonsData.donateButtonClass;
+        donateButton.textContent = buttonsData.donateButtonText;
+        // Adding event listeners because difficult to retrieve from localStorage bc of way it gets stored
+        donateButton.addEventListener("click", function () {
+            window.location.href = "./donatePlant.html";
+        });
+        donateButton.addEventListener("mouseover", function () {
+            this.style.opacity = "90%";
+            this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
+            this.style.backgroundSize = "contain";
+        });
+        donateButton.addEventListener("mouseout", function () {
+            this.style.opacity = "100%";
+            this.style.backgroundImage = "none";
+        });
+
+        const inventoryButton = document.createElement("button");
+        inventoryButton.className = buttonsData.inventoryButtonClass;
+        inventoryButton.textContent = buttonsData.inventoryButtonText;
+        // Adding event listeners because difficult to retrieve from localStorage bc of way it gets stored
+        inventoryButton.addEventListener("click", function () {
+            window.location.href = "./plantInventory.html";
+        });
+        inventoryButton.addEventListener("mouseover", function () {
+            this.style.opacity = "90%";
+            this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
+            this.style.backgroundSize = "contain";
+        });
+        inventoryButton.addEventListener("mouseout", function () {
+            this.style.opacity = "100%";
+            this.style.backgroundImage = "none";
+        });
+
+        // Append buttons to the document body or any desired location
+        document.getElementById("landing-header-buttons").appendChild(donateButton);
+        document.getElementById("landing-header-buttons").appendChild(inventoryButton);
+    }
+});
+
 
 // Event listener for the form submission
 const volunteerForm = document.getElementById("volunteerForm");
 
 volunteerForm.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevents the default form submission behavior
+    event.preventDefault(); // Prevents the default form submission behavior (which is reloading page)
 
-    // Get form values using destructuring
-    const { fullName, address, phoneNumber, hours } = event.target;
-
-    // Log form values to the console
-    console.log("Full Name:", fullName.value);
-    console.log("Address:", address.value);
-    console.log("Phone Number:", phoneNumber.value);
-    console.log("Hours Willing to Volunteer:", hours.value);
-
-    // Replace the form with buttons
-    replaceFormWithButtons();
+    // Replace the form with buttons previously hidden
+    replaceFormWithButtons(); // call back fx
 
     // Reset the form after processing
     volunteerForm.reset();
 });
+
+// ------ NOTES: To learn in the future (just in case): ------
+/*
+The getEventListeners function is a helper function that retrieves event listeners from an element. It's not a standard JavaScript function, and it relies on internal properties (__events) that may not be present in all browsers.
+
+The fx would work with this data but since the function relies on internal properties that not every browswer has it could be tricky to use so I just recreated the button to make it seem like all of it is getting retrieved from localstorage
+
+If I were to creat an object like this to store all relevant information to localStorage
+    const buttonsData = {
+        donateButtonText: donateButton.textContent,
+        donateButtonClass: donateButton.className,
+        donateButtonEvents: getEventListeners(donateButton), // Get event listeners
+        inventoryButtonText: inventoryButton.textContent,
+        inventoryButtonClass: inventoryButton.className,
+        inventoryButtonEvents: getEventListeners(inventoryButton) // Get event listeners
+    };
+I can retrieve it by using this assuming the browswer has the property I need
+
+function getEventListeners(element) {
+    const listeners = [];
+    const eventNames = Object.keys(element.__events || {});
+
+    eventNames.forEach(eventName => {
+        element.__events[eventName].forEach(listener => {
+            listeners.push({ type: eventName, listener: listener });
+        });
+    });
+
+    return listeners;
+}
+*/
