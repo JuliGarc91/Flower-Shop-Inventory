@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botanic Haven</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
-    <script defer src="./scripts/generatePlant.js"></script>
-    <script defer src="./scripts/main.js"></script>
-    <script defer src="./scripts/plantCount.js"></script>
+    <link href="landing.CSS" rel="stylesheet" type="text/CSS"/>
+    <script defer src="/scripts/API_KEY.js"></script> 
+    <script defer src="./scripts/landing.js"></script>
 </head>
 <body>
     <header>
@@ -15,34 +15,55 @@
             <img class="landing-img" src="./images/botanicGarden.jpeg" alt="Monarch Butterfly on Local Plant Species">
         </div>
         <h1>Welcome to <i>Botanic Haven</i>!</h1>
-            <nav>
-                <a href="./donatePlant.html"><button onmouseover="this.style.opacity='80%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Donate Plants 🍁</button></a>
-                <a href="./plantInventory.html"><button onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Inventory 🌷</button></a>
-                <a href="./aboutBotanicHaven.html"><button onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">About Us 🐝</button></a>
-            </nav>
+        <nav id="landing-header-buttons">
+            <a href="./aboutBotanicHaven.html"><button>About Us 🐝</button></a>
+        </nav>
     </header>
 
     <main>
-        <!-- Creating Form -->
-    <section>
-    </section>
-        <!-- Rendering Donated Plant (for reference) but should be dynamic -->
-    <section>
-    </section>
-    <br>
-    <section class="plant-inventory">
-        <h2>🌻</h2><br>
-                <nav>
-                    <a href="./donatePlant.html"><button onmouseover="this.style.opacity = '90%'; this.style.backgroundImage = 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize = 'contain';" onmouseout="this.style.opacity = '100%'; this.style.backgroundImage = 'none';">Donate Plants 🌸</button></a>
-                    <!-- Commented out the local links because it only works locally for some reason even though files are pushed to github -->
-                    <a href="./plantInventory.html"><button onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Inventory 🌷</button></a>
-                    <a href="./aboutBotanicHaven.html"><button onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">About Us 🐝</button></a>
-                </nav>
-                <br><br>
-    </section>
+        <section>
+            <form id="volunteerForm">
+                <label for="fullName">Full Name:<span class="required">*</span>
+                <input type="text" id="fullName" name="fullName" required>
+                </label>
+                <label for="address">Address:<span class="required">*</span>
+                <input type="text" id="address" name="address" required>
+                </label>
+                <label for="phoneNumber">Phone Number:<span class="required">*</span>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                </label>
+                <label for="hours">Hours Willing to Volunteer:
+                <select id="hours" name="hours" required>
+                  <option value="1">1 - 2 hours / week</option>
+                  <option value="2">2 - 5 hours / week</option>
+                  <option value="3">3 - 8 hours / week</option>
+                </select>
+                </label>
+                <button type="submit">Volunteer</button>
+            </form>
+        </section>
+
+        <section>
+            <div id="slideshow-container">
+                <!-- Slides will be added dynamically here -->
+            </div>
+        </section>
+
+        <br>
+        
+        <section class="plant-inventory">
+            <h2>🌻</h2><br>
+            <nav>
+                <!-- <a href="./donatePlant.html"><button class="hidden-button" onmouseover="this.style.opacity = '90%'; this.style.backgroundImage = 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize = 'contain';" onmouseout="this.style.opacity = '100%'; this.style.backgroundImage = 'none';">Donate Plants 🌸</button></a> -->
+                <!-- <a href="./plantInventory.html"><button class="hidden-button" onmouseover="this.style.opacity='90%'; this.style.backgroundImage= 'url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)'; this.style.backgroundSize='contain';" onmouseout="this.style.opacity='100%'; this.style.backgroundImage='none';">Inventory 🌷</button></a> -->
+                <a href="./aboutBotanicHaven.html"><button>About Us 🐝</button></a>
+            </nav>
+            <br><br>
+        </section>
+    </main>
+
     <footer class="footer">
         <p>© 2023 YourRegisteredBotanicHaven®. All rights reserved.</p>
     </footer>
-    </main>
 </body>
 </html>

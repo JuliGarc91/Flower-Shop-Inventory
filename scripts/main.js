@@ -38,7 +38,7 @@ function resetForm() {
     notesTextarea.value = "";
 }
 
-// ------ Description Text Box can only contiain fixed amount of characters ------
+// ------ Description Text Box can only contain fixed amount of characters ------
 const textarea = document.getElementById("notes"); // Get a reference to the textarea element with the id "notes"
 const charCount = document.getElementById("char-count"); // Get a reference to the element with the id "char-count"
 textarea.addEventListener("input", () => { // Add an event listener to the textarea element that listens for the "input" event

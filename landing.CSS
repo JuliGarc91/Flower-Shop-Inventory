@@ -1,0 +1,74 @@
+/* form */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  form {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  input,
+  select {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  .navigation {
+    display: none;
+    margin-top: 20px;
+  }
+
+  .navigation button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+/* hidden buttons that appear after submit form */
+.hidden-button {
+  text-align: center;
+}
+
+/* Slide Show */
+#slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
