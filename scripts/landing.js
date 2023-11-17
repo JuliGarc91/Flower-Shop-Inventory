@@ -1,3 +1,9 @@
+// .gitignore file  isn't reading my API key anymore ever since I changed it. Instead created a JSON file to 
+
+
+
+
+
 // Fetch data from the API for the slideshow on index.html
 fetch(`https://perenual.com/api/species-list?key=${API_KEY}`)
     .then(response => response.json())
