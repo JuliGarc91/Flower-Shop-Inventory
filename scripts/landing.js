@@ -1,32 +1,5 @@
-// .gitignore file  isn't reading my API key anymore ever since I changed it. Instead created a JSON file
-
-
-// Fetch the API key from the server
-fetch('/api-key')
-  .then(response => response.json())
-  .then(config => {
-    const API_KEY = config.apiKey;
-
-    // Now you can use API_KEY in your API request
-    fetch(`https://perenual.com/api/species-list?key=${API_KEY}`)
-      .then(response => response.json())
-      .then(data => {
-          createSlideshow(data.data);
-      })
-      .catch(error => {
-          console.error('Error fetching data:', error);
-      });
-  })
-  .catch(error => {
-    console.error('Error fetching API key:', error);
-  });
-
-
-
-
-
 // Fetch data from the API for the slideshow on index.html
-// use this code if using api_key.js
+
 // fetch(`https://perenual.com/api/species-list?key=${API_KEY}`)
 //     .then(response => response.json())
 //     .then(data => {
@@ -35,6 +8,8 @@ fetch('/api-key')
 //     .catch(error => {
 //         console.error('Error fetching data:', error);
 //     });
+
+const data ="";
 
 // Function to create a slideshow from the fetched data
 function createSlideshow(data) {

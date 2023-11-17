@@ -11,6 +11,7 @@ body {
   }
 
   header {
+    
     position: relative; /* so that h1 can overlap */
     width: 100%;
     height: 300px;
@@ -23,9 +24,11 @@ body {
     z-index: 1000; /* makes sure main doesnt overlap with header */
 
   }
-  h1 {
+.main-header-title {
+    margin: auto;
+    font-size: 70px;
     position: absolute;
-    top: 50%; /* Adjust as needed */
+    top: 50%;
     left: 50%;
     transform: translate(-100%, -50%); /* This specific translation function is applied in both the horizontal (X-axis) and vertical (Y-axis) directions. The values -50% mean that the element will be moved to the left by 50% of its own width and upward by 50% of its own height */
     z-index: 1; /* Ensure the h1 appears above the image */
@@ -64,12 +67,14 @@ body {
 .visit ul {
     list-style: none;
     padding: 0;
+    font-size: 20px;
 }
 
  ul li .visit{
     margin-bottom: 10px;
     position: relative;
     padding-left: 20px;
+    
 }
 
 /* hidden buttons that appear after submit form */
@@ -134,11 +139,19 @@ body {
     top: 0; /* Fix the header at the top of the viewport */
     z-index: 500; 
   }
+  .main-header-title {
+    font-size: 45px;
+    left: 50%;
+  }
   main {
     /* grid-template-columns: repeat(2, 1fr); */
     grid-template-columns: 1fr;
   }
   form {
     max-width: 100%;
+  }
+  
+  p {
+    font-size: 16px;
   }
 }
