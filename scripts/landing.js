@@ -109,6 +109,18 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = 'block';
 }
 
+// Event listener for the form submission
+const volunteerForm = document.getElementById("volunteerForm");
+
+volunteerForm.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevents the default form submission behavior (which is reloading page)
+
+    // Replace the form with buttons previously hidden
+    replaceFormWithButtons(); // call back fx
+
+    // Reset the form after processing
+    volunteerForm.reset();
+});
 // Function to replace a form with buttons that navigate to plantInventory.html and donatePlant.html when clicking "Volunteer" submit form button
 function replaceFormWithButtons() {
     // Get the form and buttons elements
@@ -216,19 +228,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
-// Event listener for the form submission
-const volunteerForm = document.getElementById("volunteerForm");
-
-volunteerForm.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevents the default form submission behavior (which is reloading page)
-
-    // Replace the form with buttons previously hidden
-    replaceFormWithButtons(); // call back fx
-
-    // Reset the form after processing
-    volunteerForm.reset();
-});
 
 // ------ NOTES: To learn in the future (just in case): ------
 /*
