@@ -3,11 +3,14 @@
 // Step 2: add fx generatePlantTemplate as a call back to populate template with JSON data from API
 // Function to fetch data from a JSON file in https://perenual.com/docs/api API - will be used to populate inventory ul tags
 
+// comment out to not use up API calls when testing other features in plantInventory.html
 function fetchDataAndGenerateTemplate() {
     fetch(`https://perenual.com/api/species-list?key=${API_KEY}`) // uses the fetch function to make an HTTP request to the specified URL, which is 'data/plantInventory.json'
         .then((response) => response.json()) // response is received from the URL, this line sets up a then callback that handles the response. The response.json() method is used to parse the response body as JSON. This is important because JSON is a common data format for exchanging data between a web server and a web page
         .then((res) => {
             console.log(res.data)
+            allPlantsData = res.data; // Store the data (for search bar)
+            generatePlantTemplate(allPlantsData); // Generate the initial template (for searchbar)
             generatePlantTemplate(res.data); //  after successfully parsing the JSON data, this line sets up another then callback. It passes the parsed plantData to the generatePlantTemplate function, which is responsible for creating and updating elements in the DOM. This is where the data from plantInventory.json is used to generate the plant inventory list in the DOM
         })
         .catch((error) => {
@@ -31,10 +34,16 @@ function generatePlantTemplate(plantData) {
         commonName.innerHTML = `<strong>Common Plant Name</strong>: ${plant.common_name}`; // Set the inner HTML of the 'commonName' paragraph to display the common plant name. Inner HTML of this paragraph is set to display common plant name using value of plantName property from object named plant. The common plant name is enclosed in <strong> tags to make it bold in the rendered HTML
 
         const scienceName = document.createElement("p");
-        scienceName.innerHTML = `<strong>Dominant Plant Color</strong>: ${plant.scientific_name}`;
+        scienceName.innerHTML = `<strong>Scientific Name</strong>: ${plant.scientific_name}`;
 
         const otherName = document.createElement("p");
         otherName.innerHTML = `<strong>Other Name(s)</strong>: ${plant.other_name.length ? plant.other_name.join(", ") : 'None'}`; // ternary statement (if other_names array is empty then otherName variable will be "None")
+
+        const cycle = document.createElement("p");
+        cycle.innerHTML = `<strong>Cycle</strong>: ${plant.cycle}`;
+
+        const watering = document.createElement("p");
+        watering.innerHTML = `<strong>Watering</strong>: ${plant.watering}`;
 
 
         // Append other elements to the list item on web page
@@ -43,6 +52,8 @@ function generatePlantTemplate(plantData) {
         listItem.appendChild(commonName);
         listItem.appendChild(scienceName);
         listItem.appendChild(otherName);
+        listItem.appendChild(cycle);
+        listItem.appendChild(watering);
 
         const inStockSelect = document.createElement("select");
 
@@ -68,3 +79,26 @@ function generatePlantTemplate(plantData) {
     plantInventorySection.innerHTML = ""; // Clear any existing content in html i this section to replace with plantList which contains the list of plants generated from the fetched data to the section with class .plant-inventory-container which is now saved to a variable
     plantInventorySection.appendChild(plantList); // this appends the ul plantList items (with li listItems) to the section
 }
+
+// ------ SEARCH BAR FX ------
+// Function to perform client-side filtering
+function performSearch() {
+    const searchInput = document.getElementById('search-input').value.toLowerCase();
+    const filterType = document.getElementById('filter-type').value;
+  
+    // Filter the allPlantsData based on searchInput and filterType
+    const filteredData = allPlantsData.filter((plant) => {
+      const searchData = plant[filterType]; // Get the data to filter on based on filterType
+      if (Array.isArray(searchData)) {
+        // If the data to search is an array (like scientific_name), join it into a string
+        return searchData.join(' ').toLowerCase().includes(searchInput);
+      } else if (searchData) {
+        // If the data to search is a string
+        return searchData.toLowerCase().includes(searchInput);
+      }
+      return false;
+    });
+  
+    // Generate the template with the filtered data
+    generatePlantTemplate(filteredData);
+  }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Inventory</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="searchBar.css" rel="stylesheet" type="text/css">
     <script defer src="/scripts/API_KEY.js"></script>
     <script defer src="scripts/manageInventory.js"></script>
 </head>
@@ -26,6 +27,16 @@
         </h2>
     </header>
     <main>
+        <!-- Search Bar -->
+        <div class="search-area">
+            <select id="filter-type">
+              <option value="common_name">Common Name</option>
+              <option value="scientific_name">Scientific Name</option>
+              <option value="cycle">Cycle</option>
+              <option value="watering">Watering</option><input type="text" id="search-input" placeholder="Search for plants..."><button id="search-button" onclick="performSearch()">Search</button>
+            </select>
+          </div>
+
         <br>
         <h2>Plant Inventory</h2>
         <br>

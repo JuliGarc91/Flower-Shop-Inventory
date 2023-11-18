@@ -67,7 +67,7 @@ body {
 .visit ul {
     list-style: none;
     padding: 0;
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
 }
 
@@ -81,10 +81,14 @@ body {
 /* hidden buttons that appear after submit form */
 #landing-header-buttons a button,
 .hidden-button {
-  padding-left: 10% auto;
+  padding: 10px 20px; /* Adjust padding as needed to create space on both sides */
+  margin-right: 10% auto;
   margin-left: 10% auto;
   text-align: center;
   background-color: rgba(252, 131, 131, 0.612);
+  font-size: 24px;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide any overflowing text */
 }
 
 /* Slide Show */
@@ -138,12 +142,18 @@ body {
     grid-template-columns: 1fr;
     height: auto;
     top: 0; /* Fix the header at the top of the viewport */
-    z-index: 500; 
+    /* z-index: 500;  */
   }
   .main-header-title {
     font-size: 45px;
-    left: 50%;
+    top:auto;
+    text-align: center;
+    transform: translate(-50%, -50%); 
   }
+  #landing-header-buttons a button,
+.hidden-button {
+  font-size: 18px;
+}
   main {
     /* grid-template-columns: repeat(2, 1fr); */
     grid-template-columns: 1fr;
@@ -153,6 +163,6 @@ body {
   }
 
   p {
-    font-size: 16px;
+    font-size: 18px;
   }
 }

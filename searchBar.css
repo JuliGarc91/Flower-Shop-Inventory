@@ -1,0 +1,19 @@
+.search-area {
+    display: flex; /* This will enable Flexbox for the container */
+    align-items: center; /* This will vertically center the items */
+    justify-content: flex-start; /* This aligns items to the start of the container */
+    margin: 0px auto;
+    padding: 10px 20%;
+}
+
+.search-area select,
+.search-area input {
+    margin-right: 10px; /* Adds some space between the elements */
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#filter-type {
+    width: auto; /*the other CSS file makes it take up 100% so doing this to override this specific select tag*/
+}
