@@ -9,7 +9,7 @@
 //         console.error('Error fetching data:', error);
 //     });
 
-const data ="";
+const data =""; //temporary so I don't use up API
 
 // Function to create a slideshow from the fetched data
 function createSlideshow(data) {
@@ -100,8 +100,23 @@ volunteerForm.addEventListener("submit", (event) => {
 function replaceFormWithButtons() {
     // Get the form and buttons elements
     const volunteerForm = document.getElementById("volunteerForm");
+    const aboutUsButton = document.createElement("button");
     const donateButton = document.createElement("button");
     const inventoryButton = document.createElement("button");
+
+        // Set attributes for the donate button
+    aboutUsButton.className = "hidden-button";
+    aboutUsButton.textContent = "About Us 🐝";
+    aboutUsButton.addEventListener("click", function () {
+        window.location.href = "./aboutBotanicHaven.html";
+    });
+    aboutUsButton.addEventListener("mouseover", function () {
+        this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
+        this.style.backgroundSize = "contain";
+    });
+    aboutUsButton.addEventListener("mouseout", function () {
+        this.style.backgroundImage = "none";
+    });
 
     // Set attributes for the donate button
     donateButton.className = "hidden-button";
@@ -110,12 +125,10 @@ function replaceFormWithButtons() {
         window.location.href = "./donatePlant.html";
     });
     donateButton.addEventListener("mouseover", function () {
-        this.style.opacity = "90%";
         this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
         this.style.backgroundSize = "contain";
     });
     donateButton.addEventListener("mouseout", function () {
-        this.style.opacity = "100%";
         this.style.backgroundImage = "none";
     });
 
@@ -126,12 +139,10 @@ function replaceFormWithButtons() {
         window.location.href = "./plantInventory.html";
     });
     inventoryButton.addEventListener("mouseover", function () {
-        this.style.opacity = "90%";
         this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
         this.style.backgroundSize = "contain";
     });
     inventoryButton.addEventListener("mouseout", function () {
-        this.style.opacity = "100%";
         this.style.backgroundImage = "none";
     });
 
