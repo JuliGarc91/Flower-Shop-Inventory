@@ -150,16 +150,18 @@ function replaceFormWithButtons() {
     volunteerForm.style.display = "none";
 
     // Append buttons to the document body
+    document.getElementById("landing-header-buttons").appendChild(aboutUsButton);
     document.getElementById("landing-header-buttons").appendChild(donateButton);
     document.getElementById("landing-header-buttons").appendChild(inventoryButton);
 
     // Save relevant information to localStorage
     const buttonsData = {
+        aboutUsButtonText: aboutUsButton.textContent,
+        aboutUsButtonClass: aboutUsButton.className,
         donateButtonText: donateButton.textContent,
         donateButtonClass: donateButton.className,
         inventoryButtonText: inventoryButton.textContent,
         inventoryButtonClass: inventoryButton.className,
-
     };
 
     localStorage.setItem('buttonsData', JSON.stringify(buttonsData));
@@ -170,9 +172,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const storedData = localStorage.getItem('buttonsData');
 
     if (storedData) {
-        const buttonsData = JSON.parse(storedData);
+        const buttonsData = JSON.parse(storedData); // storedData is an object
 
-        // Recreate buttons with stored data
+        // ---- Recreate buttons with stored data ---
+        // recreating about Us button
+        const aboutUsButton = document.createElement("button");
+        aboutUsButton.className = buttonsData.aboutUsButtonClass;
+        aboutUsButton.textContent = buttonsData.aboutUsButtonText;
+        // Adding event listeners because difficult to retrieve from localStorage bc of way it gets stored (not all browswers store event listeners)
+        aboutUsButton.addEventListener("click", function () {
+            window.location.href = "./aboutBotanicHaven.html";
+        });
+        aboutUsButton.addEventListener("mouseover", function () {
+            this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
+            this.style.backgroundSize = "contain";
+        });
+        aboutUsButton.addEventListener("mouseout", function () {
+            this.style.backgroundImage = "none";
+        });
+
+
+        // recreate donateButton
         const donateButton = document.createElement("button");
         donateButton.className = buttonsData.donateButtonClass;
         donateButton.textContent = buttonsData.donateButtonText;
@@ -181,15 +201,14 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = "./donatePlant.html";
         });
         donateButton.addEventListener("mouseover", function () {
-            this.style.opacity = "90%";
             this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
             this.style.backgroundSize = "contain";
         });
         donateButton.addEventListener("mouseout", function () {
-            this.style.opacity = "100%";
             this.style.backgroundImage = "none";
         });
 
+        // recreate inventoryButton
         const inventoryButton = document.createElement("button");
         inventoryButton.className = buttonsData.inventoryButtonClass;
         inventoryButton.textContent = buttonsData.inventoryButtonText;
@@ -198,16 +217,15 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = "./plantInventory.html";
         });
         inventoryButton.addEventListener("mouseover", function () {
-            this.style.opacity = "90%";
             this.style.backgroundImage = "url(https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/15768824452_maple.jpg)";
             this.style.backgroundSize = "contain";
         });
         inventoryButton.addEventListener("mouseout", function () {
-            this.style.opacity = "100%";
             this.style.backgroundImage = "none";
         });
 
         // Append buttons to the document body or any desired location
+        document.getElementById("landing-header-buttons").appendChild(aboutUsButton);
         document.getElementById("landing-header-buttons").appendChild(donateButton);
         document.getElementById("landing-header-buttons").appendChild(inventoryButton);
         volunteerForm.style.display = "none"; // makes sure form stays hidden when going back to home
