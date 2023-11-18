@@ -191,7 +191,7 @@ select[disabled] {
 .plant-inventory-container ul,
 .donated-plants ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   list-style: none;
   padding-left: 0;

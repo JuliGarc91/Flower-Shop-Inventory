@@ -28,16 +28,17 @@
     </header>
     <main>
         <!-- Search Bar -->
-        <div class="search-area">
+        <form class="search-area">
             <select id="filter-type">
               <option value="common_name">Common Name</option>
               <option value="scientific_name">Scientific Name</option>
+              <option value="other_name">Other Name(s)</option>
               <option value="cycle">Cycle</option>
-              <option value="watering">Watering</option><input type="text" id="search-input" placeholder="Search for plants..."><button id="search-button" onclick="performSearch()">Search</button>
+              <option value="watering">Watering</option><input type="text" id="search-input" placeholder="Search for plants..." required>
+              <button id="search-button">Search</button>
             </select>
-          </div>
-
-        <br>
+        </form>
+        
         <h2>Plant Inventory</h2>
         <br>
         <section class="other-page plant-inventory-container">

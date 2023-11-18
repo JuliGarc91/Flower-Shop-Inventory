@@ -81,24 +81,30 @@ function generatePlantTemplate(plantData) {
 }
 
 // ------ SEARCH BAR FX ------
-// Function to perform client-side filtering
-function performSearch() {
-    const searchInput = document.getElementById('search-input').value.toLowerCase();
-    const filterType = document.getElementById('filter-type').value;
-  
-    // Filter the allPlantsData based on searchInput and filterType
-    const filteredData = allPlantsData.filter((plant) => {
+// Function to perform client-side filtering (only 1 API call)
+
+function performSearch(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  // Obtain the search input and filter type from the form
+  const searchInput = document.querySelector('.search-area #search-input').value.toLowerCase();
+  const filterType = document.querySelector('.search-area #filter-type').value;
+
+  // Filter the allPlantsData based on the search input and filter type
+  const filteredData = allPlantsData.filter(plant => {
       const searchData = plant[filterType]; // Get the data to filter on based on filterType
-      if (Array.isArray(searchData)) {
-        // If the data to search is an array (like scientific_name), join it into a string
-        return searchData.join(' ').toLowerCase().includes(searchInput);
-      } else if (searchData) {
-        // If the data to search is a string
-        return searchData.toLowerCase().includes(searchInput);
-      }
-      return false;
-    });
-  
-    // Generate the template with the filtered data
-    generatePlantTemplate(filteredData);
-  }
+
+      // Join array data into a string or keep string data as-is
+      const plantDataToString = Array.isArray(searchData) ? searchData.join(' ').toLowerCase() : searchData.toLowerCase();
+
+      // Check if plant data includes the search input
+      return plantDataToString.includes(searchInput);
+  });
+
+  // Call a function to update the UI with the filtered data
+  generatePlantTemplate(filteredData);
+}
+
+// Attach the performSearch function to the form's submit event
+const searchForm = document.querySelector('.search-area');
+searchForm.addEventListener('submit', performSearch);
