@@ -89,11 +89,12 @@ body {
   font-size: 24px;
   white-space: nowrap; /* Prevent text from wrapping to the next line */
   overflow: hidden; /* Hide any overflowing text */
+  border-radius: 12px;
 }
 /* numbered list on aboutBotanicHaven.html which is now in index.html */
 .about-us {
   margin: auto;
-  width: 80%;
+  width: 70%;
   text-align: center;
   list-style-position: inside;
 }
@@ -104,7 +105,7 @@ body {
 /* Slide Show */
 .slideshow-p,
 #slideshow-container {
-  width: 90%;
+  width: 70%;
   position: relative;
   margin: auto;
   padding-left: 10%;

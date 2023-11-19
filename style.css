@@ -4,7 +4,7 @@ body {
     /* color:rgb(206, 255, 239); */
     background: linear-gradient(rgb(53, 90, 77),rgb(24, 43, 36));
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: auto;
+    margin: auto 20px;
     padding: auto;
 }
 
@@ -24,6 +24,7 @@ h6 {
   width: 100%;
   margin: auto;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 header {
@@ -66,11 +67,9 @@ strong {
 
 /* images originally in aboutBotanicHaven.html now in index.html*/
 .about-us-img {
-  width: 70%;
+  width: 90%;
   border-radius: 35px;
   box-shadow: 3px 3px 3px rgba(10, 39, 22, 0.5);
-  margin: auto;
-  padding: 0px;
 }
 /* aboutBotanicHaven.html */
 #snakes-head,
@@ -140,7 +139,7 @@ form textarea {
 input,
 select,
 textarea {
-  background-color: rgb(255, 245, 250);
+  background-color: rgb(255, 223, 239);
 }
 
 #volunteer-button,
