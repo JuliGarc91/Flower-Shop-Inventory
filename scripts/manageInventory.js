@@ -59,7 +59,7 @@ function generatePlantTemplate(plantData) {
 
         // Create and append the <option> elements
         const optionYes = document.createElement("option"); // to add the option
-        optionYes.value = "In Stock"; // .value is what gets sent to the server when the form containing the select element is submitted. It's also what JavaScript can access when you want to get the selected option's value
+        optionYes.value = "In Stock"; // .value is what gets sent to the server when the form containing the select element is submitted by user - adding .value to arguments in order to get the values inputted by user and not just the html code
         optionYes.textContent = "In Stock";
 
         const optionNo = document.createElement("option");

@@ -1,4 +1,4 @@
-// ------ ATTACHING JAVASCRIPT TO HTML ------
+// ------ this code pertains to donatePlant.html and uses data from plantInventory.JSON instead of using API call------
 // grabbing form from form tag in html code (donatePlant.html)
 const form = document.querySelector("form");
 
@@ -18,6 +18,7 @@ form.addEventListener("submit", (event) => {
 });
 
 // ---------- HARDCODED REMOVE BUTTON FUNCTIONALITY ---------- 
+
 // to add functionality where hardcoded listItems can be removed (these list items are single plants donated to the inventory)
 
 const listItems = document.querySelectorAll("li button"); // querySelectAll is a method that returns all element descendants of node that match selectors (data type of output is an array so we can iterate through it)
@@ -43,15 +44,18 @@ const textarea = document.getElementById("notes"); // Get a reference to the tex
 const charCount = document.getElementById("char-count"); // Get a reference to the element with the id "char-count"
 textarea.addEventListener("input", () => { // Add an event listener to the textarea element that listens for the "input" event
     // Get the maximum number of characters allowed for the textarea from its "maxlength" attribute
-    const maxLength = parseInt(textarea.getAttribute("maxlength"));
-    const currentLength = textarea.value.length; // Get the current length of the text in the textarea
+    const maxLength = parseInt(textarea.getAttribute("maxlength")); // uses the getAttribute method to retrieve the value of the maxlength attribute of the textarea element. In the HTML it is "200". The parseInt function is used to parse the retrieved string as an integer. This is necessary because the maxlength attribute's value is a string, but you typically want to work with it as a numeric value. So, parseInt("200") would convert the string "200" to the integer 200
+    const currentLength = textarea.value.length; // Get the current length of the text in the textarea based on user input (using .value)
     const remainingCharacters = maxLength - currentLength; // Calculate the number of remaining characters by subtracting the current length from the maximum length
     charCount.textContent = `Characters left: ${remainingCharacters}`; // Update the text content of the element with the id "char-count" to display the remaining characters
 });
 
 // ------ DROP DOWN MENU for plant name ------
-document.addEventListener("DOMContentLoaded", function () {
-    const plantDropdown = document.getElementById("plant");
+// DOMContentLoaded is an event in JavaScript that is fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and other resources to finish loading. This event is particularly useful when you want to interact with or manipulate the Document Object Model (DOM) of the page as soon as it's ready, but before all external resources have been fetched
+
+document.addEventListener("DOMContentLoaded", function () { // event listener listens for the DOMContentLoaded event. When the event occurs (i.e., when the DOM is fully loaded), the provided function (the callback) is executed.
+    // Step 2: make dropdown from parsed Data collected from network response after ensuring that JavaScript code executes after the HTML structure has been parsed and is ready for manipulation. This is important because, without it, code might try to access DOM elements that haven't been created yet
+    const plantDropdown = document.getElementById("plant"); //looks for label called plant
     // Function to add options to the dropdown
     function populateDropdown(data) {
         data.forEach((plant) => { // method iterates through data array of objects from plantInventory.JSON
@@ -61,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             plantDropdown.appendChild(option);  // Append the newly created <option> element to the plantDropdown element.
         });
     }
-    // Fetch the JSON data from the file
+    // Step 1: Fetch the JSON data from the file
     fetch("data/plantInventory.json") // Initiate a network request to fetch data from the "data/plantInventory.json" URL.
         .then((response) => response.json()) // When the response is received, parse it as JSON
         .then((data) => { // Once the JSON data is successfully parsed, execute the following code block:
@@ -72,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ------ DROP DOWN MENU for color ------
-
 document.addEventListener("DOMContentLoaded", function () {
     const colorDropdown = document.getElementById("color"); // find and select HTML element with id "color" and store in 'colorDropdown'
     
