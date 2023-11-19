@@ -20,61 +20,106 @@
             <!-- Once Volunteer submit button is clicked 2 more buttons will populate here using fx in landing.js -->
         </nav>
     </header>
-
     <main>
-        <section>
-            <section class="visit">
-                <h2>Plan a Visit</h2>
-                <ul>
-                    <li>Monday: 9:00 AM - 5:00 PM</li>
-                    <li>Tuesday: 9:00 AM - 5:00 PM</li>
-                    <li>Wednesday: 9:00 AM - 5:00 PM</li>
-                    <li>Thursday: 9:00 AM - 5:00 PM</li>
-                    <li>Friday: 9:00 AM - 5:00 PM</li>
-                    <li>Saturday: 10:00 AM - 7:00 PM</li>
-                    <li>Sunday: 10:00 AM - 3:00 PM</li>
-                </ul>
+        <section class="visit">
+            <br><br>
+            <h2>Plan a Visit</h2>
+            <ul>
+                <li>Monday: 9:00 AM - 5:00 PM</li>
+                <li>Tuesday: 9:00 AM - 5:00 PM</li>
+                <li>Wednesday: 9:00 AM - 5:00 PM</li>
+                <li>Thursday: 9:00 AM - 5:00 PM</li>
+                <li>Friday: 9:00 AM - 5:00 PM</li>
+                <li>Saturday: 10:00 AM - 7:00 PM</li>
+                <li>Sunday: 10:00 AM - 3:00 PM</li>
+            </ul>
+                <form id="volunteerForm">
+                    <h2>Become a Contributor</h2>
+                    <p>Donate Plants and Gain Access to our Plant Inventory!</p>
+                    <label for="fullName">Full Name:<span class="required">*</span>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </label>
+                    <label for="address">Address:<span class="required">*</span>
+                        <input type="text" id="address" name="address" required>
+                    </label>
+                    <label for="phoneNumber">Phone Number:<span class="required">*</span>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    </label>
+                    <label for="hours">Hours Willing to Volunteer:
+                        <select id="hours" name="hours" required>
+                            <option value="1">1 - 2 hours / week</option>
+                            <option value="2">2 - 5 hours / week</option>
+                            <option value="3">3 - 8 hours / week</option>
+                        </select>
+                     </label>
+                    <button id="volunteer-button"type="submit">Volunteer</button>
+                </form>
+                <h2>About Us</h2>
+                    <p>Welcome to <strong>Botanic Haven</strong>, your premier destination for exploring a kaleidoscope of botanical wonders. Nestled in our verdant oasis, we pride ourselves on fostering a community where both novice gardeners and experienced horticulturists can thrive. Our diverse collection ranges from the vibrant Rosy Pussytoes to the unique Globe Cactus, each species offering its own distinct beauty and charm.</p>
+
+                    <p>At Botanic Haven, we're more than just a botanical shop; we're a vibrant community dedicated to nurturing a greener, more vibrant world. Our platform is not only a showcase of stunning plant varieties but also a hub for botanical enthusiasts to contribute and manage our expanding collection. Whether you're donating a plant or managing our inventory, your engagement helps us cultivate a magnificent botanical paradise.</p>
+                    
+                    <p>Our interactive website allows you to explore our vast array of plants, manage donations, and keep track of our ever-growing inventory. With features like viewing our newly designed landing page, managing plant collections, and even donating plants with ease, we ensure an engaging and seamless experience.</p>
+                    
+                    <p>Join us at Botanic Haven, where nature's splendor fills your life with color and serenity. Together, let's create a blooming oasis that celebrates the beauty and diversity of the plant kingdom.</p>
+        
+                    <p>🍁</p>
             </section>
-            
-            <form id="volunteerForm">
-                <h2>Become a Contributor</h2>
-                <label for="fullName">Full Name:<span class="required">*</span>
-                <input type="text" id="fullName" name="fullName" required>
-                </label>
-                <label for="address">Address:<span class="required">*</span>
-                <input type="text" id="address" name="address" required>
-                </label>
-                <label for="phoneNumber">Phone Number:<span class="required">*</span>
-                <input type="tel" id="phoneNumber" name="phoneNumber" required>
-                </label>
-                <label for="hours">Hours Willing to Volunteer:
-                <select id="hours" name="hours" required>
-                  <option value="1">1 - 2 hours / week</option>
-                  <option value="2">2 - 5 hours / week</option>
-                  <option value="3">3 - 8 hours / week</option>
-                </select>
-                </label>
-                <button id="volunteer-button"type="submit">Volunteer</button>
-            </form>
-        </section>
         <section>
+            <br><br>
             <h2>Plants in Our Haven</h2>
+            <br><br>
+            <p class="slideshow-p">Step into the world of <strong>Botanic Haven</strong>, where every visit to our website or garden unveils a treasure trove of botanical wonders. Join us as a contributor; your plant donations and hands-on involvement in inventory management are crucial to our growth. By aiding in the management of our botanical inventory, you enhance our living collection. Your active engagement is the cornerstone of our thriving plant-loving community, deepening our collective passion and propelling the legacy of Botanic Haven.</p>
+            <br>
             <div id="slideshow-container">
-                <!-- Slides will be added dynamically here -->
+                <!-- Slides will be added dynamically here -->   
+            </div>
+            <div class="plants">
+                <ol>
+                    <li><strong>Rosy Pussytoes:</strong> These maroon-hued beauties add a touch of elegance to any garden.</li>
+                    <li><strong>Parrot-lily:</strong> Vibrant turquoise blooms that evoke the lushness of the tropics.</li>
+                    <li><strong>Hudson Bay Currant:</strong> Sporting striking fuchsia shades, this plant is both captivating and elegant.</li>
+                    <li><strong>Dentate False Pennyroyal:</strong> Fiery red leaves that bring a burst of color to your landscape.</li>
+                    <li><strong>Dot Lichen:</strong> With deep crimson hues, these lichens are nature's artwork.</li>
+                    <li><strong>Southern Swamp Aster:</strong> Delicate pink petals that brighten up any outdoor space.</li>
+                    <li><strong>Forest Naupaka:</strong> The subtle khaki tones of this plant blend seamlessly with natural surroundings.</li>
+                    <li><strong>Madrone:</strong> Blue-green foliage and intricate branches make this a standout in any garden.</li>
+                    <li><strong>Globe Cactus:</strong> Bold and striking in various shades, from black and gray to vibrant orange.</li>
+                    <li><strong>Snake's Head Fritillary:</strong> With its stunning magenta petals, brings a burst of color and life to any garden.</li>
+                </ol>
             </div>
         </section>
+
+
+
         <section>
-            <p>Embark on a journey through a world of botanical wonders that awaits you. Immerse yourself in the beauty of our curated collections right here on our landing page. For a more profound experience, consider making a physical visit to our garden, where you can explore the vast richness of our extensive plant collection.</p>
+            <div class ="img-container">
+                <br><br>
+                <h2>View Our Collection of Plants!</h2>
+                <br><br>
+                <img class="about-us-img" src="https://www.fs.usda.gov/wildflowers/plant-of-the-week/images/rosypussytoes/Antennaria-rosea_Christopher_Christie-lg.jpg" alt="Rosy Pussytoes (Antennaria rosea)"/>
+            </div>
+            <p id="rosyPussyToes">Rosy Pussytoes (Antennaria rosea). Photo by Christopher Christie.</p>
+
+            <div class ="img-container">
+                <img class="about-us-img" src="https://www.bbg.org/img/uploads/lightbox/_lightbox_retina/snakes-head-fritillary_MS_52020358788.jpg" alt="Rosy Pussytoes (Antennaria rosea)"/>
+            </div>
+            <p id="snakes-head">Snake's Head Fritillary (Fritillaria Meleagris). Photo by Michael Stewart.</p>
+            <div class ="img-container">
+                <img class="about-us-img" src="https://s3.amazonaws.com/eit-planttoolbox-prod/media/images/Alstroemeria_flower__54OIroKQVGGK.jpe" alt="Parrot-lillies (Alstroemeria)"/>
+            </div>
+            <p id="Parrot-lillies">Parrot-lillies (Alstroemeria). Photo by Robin Draton.</p>
         </section>
 
     </main>
-    <section class="plant-inventory">
+    <section class="plant-inventory footer">
         <h2>🌻</h2><br>
-        <p>123 Garden Lane
+        <p><strong>123 Garden Lane
             Botanica City, FL 54321
             United States</p>
         <p>Phone Number:
-            555-123-4567</p>
+            555-123-4567</p></strong>
+            <br><br>
     </section>
     <footer class="footer">
         <p>© 2023 YourRegisteredBotanicHaven®. All rights reserved.</p>

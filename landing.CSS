@@ -11,7 +11,6 @@ body {
   }
 
   header {
-    
     position: relative; /* so that h1 can overlap */
     width: 100%;
     height: 300px;
@@ -46,14 +45,9 @@ body {
     display: grid;
     /* grid-template-columns: repeat(2, 1fr); */
     /* grid-template-columns: 1fr 3fr 1fr; */
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr 2fr;
     gap: 10px; /* Adjust the gap between columns as needed */
-  }
-  
-  form {
-    max-width: 90%;
     margin: auto;
-    text-align: center;
   }
 
   input,
@@ -64,6 +58,11 @@ body {
     box-sizing: border-box;
   }
 
+.visit {
+  width: 100%;
+  margin: 0px;
+  padding-left: 10%;
+}
 
 .visit ul {
     list-style: none;
@@ -75,7 +74,7 @@ body {
  ul li .visit{
     margin-bottom: 10px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 10%;
     width: 100%;
 }
 
@@ -91,12 +90,30 @@ body {
   white-space: nowrap; /* Prevent text from wrapping to the next line */
   overflow: hidden; /* Hide any overflowing text */
 }
-
+/* numbered list on aboutBotanicHaven.html which is now in index.html */
+.about-us {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  list-style-position: inside;
+}
+/* numbered list on aboutBotanicHaven.html which is now in index.html */
+.plants {
+  text-align: center;
+}
 /* Slide Show */
+.slideshow-p,
 #slideshow-container {
-  max-width: 50%;
+  width: 90%;
   position: relative;
   margin: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* Slide Show Picture Common Plant Name Paragraph */
+.plant-common-name {
+  font-weight: bold;
 }
 
 .mySlides {
@@ -145,9 +162,12 @@ body {
     top: 0; /* Fix the header at the top of the viewport */
     /* z-index: 500;  */
   }
+  h2 {
+    font-size: 30px;
+  }
   .main-header-title {
     font-size: 45px;
-    top:auto;
+    top:50%;
     text-align: center;
     transform: translate(-50%, -50%); 
   }
@@ -160,6 +180,11 @@ body {
     grid-template-columns: 1fr;
   }
   form {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .slideshow-p {
     max-width: 100%;
   }
 
