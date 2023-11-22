@@ -45,7 +45,7 @@ body {
     display: grid;
     /* grid-template-columns: repeat(2, 1fr); */
     /* grid-template-columns: 1fr 3fr 1fr; */
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 2fr 2fr 2fr;
     gap: 10px; /* Adjust the gap between columns as needed */
     margin: auto;
   }
@@ -61,7 +61,7 @@ body {
 .visit {
   width: 100%;
   margin: 0px;
-  padding-left: 10%;
+  /* padding-left: 10%; */
 }
 
 .visit ul {
@@ -98,6 +98,10 @@ body {
   text-align: center;
   list-style-position: inside;
 }
+
+/* .plants-in-our-haven {
+  margin-left: 100px;
+} */
 /* numbered list on aboutBotanicHaven.html which is now in index.html */
 .plants {
   text-align: center;

@@ -1,13 +1,13 @@
 // Fetch data from the API for the slideshow on index.html
 
-fetch(`https://perenual.com/api/species-list?key=${API_KEY}`)
-    .then(response => response.json())
-    .then(data => {
-        createSlideshow(data.data);
-    })
-    .catch(error => {
-        console.error('Error fetching data:', error);
-    });
+// fetch(`https://perenual.com/api/species-list?key=${API_KEY}`)
+//     .then(response => response.json())
+//     .then(data => {
+//         createSlideshow(data.data);
+//     })
+//     .catch(error => {
+//         console.error('Error fetching data:', error);
+//     });
 
 const data =""; //temporary so I don't use up API
 
