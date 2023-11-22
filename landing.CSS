@@ -10,7 +10,7 @@ body {
   text-align: center;
   }
 
-  header {
+.landing-header {
     position: relative; /* so that h1 can overlap */
     width: 100%;
     height: 300px;
@@ -25,7 +25,7 @@ body {
   }
 .main-header-title {
     margin: auto;
-    font-size: 70px;
+    font-size: 600%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -41,7 +41,7 @@ body {
   }
   
 
-  main {
+  .landing-main {
     display: grid;
     /* grid-template-columns: repeat(2, 1fr); */
     /* grid-template-columns: 1fr 3fr 1fr; */
@@ -155,41 +155,53 @@ body {
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-@media (max-width:767px) {
-  header {
-    display: grid;
-    grid-template-columns: 1fr;
-    height: auto;
-    top: 0; /* Fix the header at the top of the viewport */
-    /* z-index: 500;  */
-  }
-  h2 {
-    font-size: 30px;
-  }
+
+
+
+
+
+/* Break Points */
+@media (min-width: 250px) and (max-width: 545px) {
   .main-header-title {
-    font-size: 45px;
-    top:50%;
-    text-align: center;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
+    font-size: 40px;
   }
-  #landing-header-buttons a button,
-.hidden-button {
-  font-size: 18px;
-}
-  main {
-    /* grid-template-columns: repeat(2, 1fr); */
+  .landing-main {
     grid-template-columns: 1fr;
   }
-  form {
-    max-width: 100%;
-    font-size: 14px;
+  .visit {
+    padding-left: 0%;
   }
+}
 
-  .slideshow-p {
-    max-width: 100%;
+@media (min-width:546px) and (max-width: 750px) {
+  .main-header-title {
+    transform: translate(-50%, -50%);
   }
+  .landing-main {
+    grid-template-columns: 1fr;
+  }
+  .visit {
+    padding-left: 0%;
+  }
+}
 
-  p {
-    font-size: 18px;
+@media (min-width:751px) and (max-width: 767px) {
+  .main-header-title {
+    transform: translate(-50%, -50%);
   }
+  .landing-main {
+    grid-template-columns: 1fr;
+  }
+  .visit {
+    padding-left: 0%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1240px) {
+
+}
+
+@media (min-width: 1241px) and (max-width: 1280px) {
+
 }

@@ -81,9 +81,9 @@ function generatePlantTemplate(plantData) {
 }
 
 // ------ SEARCH BAR FX ------
-// Function to perform client-side filtering (only 1 API call)
+// Function to perform client-side filtering (only 1 API request to retrieve data to store in allPlantsData done in fx fetchDataAndGenerateTemplate to later use a callback fx to filter it out)
 
-function performSearch(event) {
+function performSearch(event) { // the event would be click on search to submit user search input along with selected filter type
   event.preventDefault(); // Prevent the default form submission behavior (which is to reload the page) to handle the form submission ourselves to perform a search without a page reload
 
   // Obtain the search input and filter type from the form

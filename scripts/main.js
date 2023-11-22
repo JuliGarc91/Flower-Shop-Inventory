@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () { // event listener li
         });
     }
     // Step 1: Fetch the JSON data from the file
-    fetch("data/plantInventory.json") // Initiate a network request to fetch data from the "data/plantInventory.json" URL.
+    fetch(`./data/plantInventory.json`) // Initiate a network request to fetch data from the "data/plantInventory.json" URL.
         .then((response) => response.json()) // When the response is received, parse it as JSON
         .then((data) => { // Once the JSON data is successfully parsed, execute the following code block:
             // Call the function to populate the dropdown with the retrieved data
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     // Fetch the JSON data from the file
-    fetch("data/plantInventory.json") // fetch method is used to make HTTP request to specified JSON file ("data/plantInventory.json"). This request retrieves the data from the JSON file
+    fetch(`./data/plantInventory.json`) // fetch method is used to make HTTP request to specified JSON file ("data/plantInventory.json"). This request retrieves the data from the JSON file
         .then((response) => response.json())
         .then((data) => { // .then() method is used to handle response from fetch. When the response is received, the arrow function (data) => {...} is executed. In this function, the retrieved JSON data is represented by the data parameter. This is how it knows that data contains the JSON data from the file.
             populateDropdown(data); // The populateDropdown function is then called, passing the data parameter to it. This is where the JSON data is used to iterate through and add options to the dropdown based on the "dominantColor" property of each plant in the JSON data.
