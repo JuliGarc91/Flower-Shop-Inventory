@@ -29,7 +29,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-100%, -50%); /* This specific translation function is applied in both the horizontal (X-axis) and vertical (Y-axis) directions. The values -50% mean that the element will be moved to the left by 50% of its own width and upward by 50% of its own height */
+    transform: translate(-50%, -50%); /* This specific translation function is applied in both the horizontal (X-axis) and vertical (Y-axis) directions. The values -50% mean that the element will be moved to the left by 50% of its own width and upward by 50% of its own height */
     z-index: 1; /* Ensure the h1 appears above the image */
     background-color: rgba(0, 0, 0, 0.5);
   }
