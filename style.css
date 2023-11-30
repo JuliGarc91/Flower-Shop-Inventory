@@ -4,8 +4,7 @@ body {
     /* color:rgb(206, 255, 239); */
     background: linear-gradient(rgb(53, 90, 77),rgb(24, 43, 36));
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: auto 20px;
-    padding: auto;
+    margin: auto;
 }
 
 h1,
@@ -29,8 +28,6 @@ h6 {
 
 header {
     width: 100%;
-    max-width: 100%;
-    /* min-width: 100%; */
     background: linear-gradient(rgb(53, 90, 77),rgb(33, 58, 49));
     border-bottom: 3px double #73956f;
     color: rgb(213, 252, 239);
@@ -54,12 +51,12 @@ strong {
 
 .header-img {
   width: 30%;
-  max-width: 30%; 
   border-radius: 35px;
-  margin-top: 20px;
   box-shadow: 3px 3px 3px rgba(10, 39, 22, 0.5);
 }
-
+.about-us {
+  text-align: center;
+}
 .about-us-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -99,7 +96,6 @@ main {
   grid-template-columns: 1fr 2fr;
   box-sizing: border-box;
   width: 90%;
-  margin-left: 5%;
 }
 
 .new-plant-form {
@@ -125,7 +121,6 @@ form textarea {
   margin: auto;
   width: 100%;
   border-radius: 5px;
-  /* padding-left: 10px; */
   padding: 0px 10px 0px 0px;
 }
 
@@ -140,7 +135,14 @@ input,
 select,
 textarea {
   background-color: rgb(255, 223, 239);
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
 }
+
+/* Style for the placeholder */
+
 
 #volunteer-button,
 #search-button, /*button is not immediately following the #search-input element; instead, it's following the select element - use the descendant selector (a space) or the child selector (>) to target the button within the .search-area class.*/
@@ -305,16 +307,13 @@ footer p {
     font-size: 20px;
   }
   .header-img {
-    width: 70%;
-    border-radius: 5px;
-    margin-top: 5px;
+    width: 100%;
+    border-radius: 0;
   }
   .about-us-img {
-    border-radius: 5px;
+    border-radius: 15px;
   }
-  h2 {
-    font-size: 13px;
-  }
+
   header h1 span {
     font-size: 10px;
   }
@@ -322,7 +321,6 @@ footer p {
   body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
     overflow-y: auto; /* Enable vertical scrollbar if necessary */
-    font-size: 8px;
   }
   .main-container {
     margin: auto;
@@ -338,44 +336,29 @@ footer p {
   .donated-plants ul {
     display: grid;
     grid-template-columns: 1fr;
-    /* gap: 1rem;
-    list-style: none;
-    padding-left: 0;
-    margin: 0; */
   }
-  form button[type="submit"],
-  button {
-    margin: 5px;
-    padding: 5px;
-    font-size: 8px;
-  }
-  input,
-  select,
-  textarea {
-    font-size: 8px;
-  }
+
   #snakes-head,
   #Parrot-lillies,
   #rosyPussyToes {
-    font-size: 5px;
     color: lightcoral;
   }
   .plants {
     margin-left: 0%;
   }
   .about-us {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   nav {
     padding-bottom: 5px;
   }
 
   footer {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: auto;
+    padding-bottom: auto;
   }
   footer p {
-    font-size: 6px;
+    font-size: auto;
   }
 }
 

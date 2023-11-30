@@ -6,7 +6,6 @@ body {
   background: linear-gradient(rgb(53, 90, 77),rgb(24, 43, 36));
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: auto;
-  padding: auto;
   text-align: center;
   }
 
@@ -43,10 +42,7 @@ body {
 
   .landing-main {
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
-    /* grid-template-columns: 1fr 3fr 1fr; */
     grid-template-columns: 2fr 2fr 2fr;
-    gap: 10px; /* Adjust the gap between columns as needed */
     margin: auto;
   }
 
@@ -82,14 +78,12 @@ body {
 #landing-header-buttons a button,
 .hidden-button {
   padding: 10px 20px; /* Adjust padding as needed to create space on both sides */
-  margin-right: 10% auto;
-  margin-left: 10% auto;
   text-align: center;
   background-color: rgba(252, 131, 131, 0.612);
   font-size: 24px;
   white-space: nowrap; /* Prevent text from wrapping to the next line */
   overflow: hidden; /* Hide any overflowing text */
-  border-radius: 12px;
+  border-radius: 0;
 }
 /* numbered list on aboutBotanicHaven.html which is now in index.html */
 .about-us {
@@ -99,9 +93,6 @@ body {
   list-style-position: inside;
 }
 
-/* .plants-in-our-haven {
-  margin-left: 100px;
-} */
 /* numbered list on aboutBotanicHaven.html which is now in index.html */
 .plants {
   text-align: center;

@@ -1,9 +1,9 @@
 .search-area {
     display: flex; /* This will enable Flexbox for the container */
     align-items: center; /* This will vertically center the items */
-    justify-content: flex-start; /* This aligns items to the start of the container */
-    margin: 0px auto;
-    padding: 10px 20%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 80%;
 }
 
 .search-area select,
@@ -16,4 +16,22 @@
 
 #filter-type {
     width: auto; /*the other CSS file makes it take up 100% so doing this to override this specific select tag*/
+}
+#search-input {
+    background-color: rgb(255, 223, 239);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+  }
+@media (min-width: 250px) and (max-width: 545px) {
+    .search-area {
+        padding-top: 10px;
+        display: flex; /* Enable Flexbox for the container */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        margin: auto; /* Center the container and remove default margin */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        max-width: 45%; /* Limit the maximum width to prevent spilling out */
+    }
 }
